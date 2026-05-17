@@ -1,15 +1,16 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
 
 @theme {
-  --color-primary: #28462E;
-  --color-secondary: #B3C1B0;
-  --color-text: #1E1E1E;
-  --color-white: #f5f5f5;
-  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --color-black: #1D1D1D;
+  --color-grey: #A4A4A4;
+  --color-white: #FBFBFB;
 }
 
 @layer base {
+  * {
+  font-family: 'Roboto', sans-serif;
+  }
   h1, h2 {
     font-weight: 600;
   }
