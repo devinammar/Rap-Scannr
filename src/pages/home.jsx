@@ -1,7 +1,9 @@
+import { Topbar } from '../components/topbar'
+
 export const Home = () => {
     return (
         <div>
-            <h1>tes</h1>
+            <Topbar />
         </div>
     )
 }

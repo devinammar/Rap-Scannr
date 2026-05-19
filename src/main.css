@@ -5,6 +5,10 @@
   --color-black: #1D1D1D;
   --color-grey: #A4A4A4;
   --color-white: #FBFBFB;
+  --text-p: 14px;
+  --text-h3: 24px;
+  --text-h2: 52px;
+  --text-h1: 120px;
 }
 
 @layer base {
