@@ -6,9 +6,9 @@
   --color-grey: #A4A4A4;
   --color-white: #FBFBFB;
   --text-p: 14px;
-  --text-h3: 24px;
-  --text-h2: 52px;
   --text-h1: 120px;
+  --text-h2: 52px;
+  --text-h3: 24px;
 }
 
 @layer base {
