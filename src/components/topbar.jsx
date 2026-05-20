@@ -8,7 +8,7 @@ export const Topbar = () => {
     <div>
       <ul
         id="containertopbar"
-        className="flex justify-center t-0 list-none text-p bg-grey/40 font-medium gap-40 pt-4 pb-4"
+        className="flex justify-center t-0 list-none text-p bg-grey/40 font-medium pt-4 pb-4 gap-40 min-[1360px]:gap-50 max-[1024px]:gap-25 max-[768px]:hidden"
       >
         <li className={listtopbar}>
           <Link to="/">Home</Link>

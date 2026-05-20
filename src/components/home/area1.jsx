@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export const Area1 = () => {
   return (
     <div>
+      <div></div>
       <h1 className="text-h1 font-medium">Rap Scannr</h1>
       <p className="text-p font-black">
         Explore rap flow, lyrical cadence, and vocal delivery through
