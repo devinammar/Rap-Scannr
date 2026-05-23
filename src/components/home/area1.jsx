@@ -16,11 +16,11 @@ export const Area1 = () => {
             interactive track analysis, flow visualization, and peak speed tracking
           </p>
           <div className="[grid-area:button] flex gap-10 justify-self-end">
-            <Link className="bg-black h-10 flex w-[222px]" to="login">
+            <Link className="bg-black h-10 flex w-[222px] hover:bg-black/50" to="login">
               <p className={buttonp}>Login</p>
             </Link>
-            <Link className="bg-grey h-10 flex w-[222px]" to="register">
-              <p className={buttonp}>Register</p>
+            <Link className="bg-grey h-10 flex w-[222px] hover:bg-grey/50 group" to="register">
+              <p className={`${buttonp} group-hover:text-black`}>Register</p>
             </Link>
           </div>
         </div>
