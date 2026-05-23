@@ -16,7 +16,7 @@ export const Sidebar = () => {
         className="hidden fixed top-3 left-6 bg-transparent cursor-pointer z-[1000] border-0 max-md:block"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <img className="w-6 h-6" src="/hamburgericon-green.png" alt="menu" />
+        <img className="w-6 h-6" src="/hamburgericon.png" alt="menu" />
       </button>
 
       {isOpen && (
