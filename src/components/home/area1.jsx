@@ -1,20 +1,30 @@
 import { Link } from "react-router-dom";
 
 export const Area1 = () => {
+
+  const buttonp =
+  "text-p text-white font-medium self-center ml-6"
+
   return (
-    <div>
-      <div></div>
-      <h1 className="text-h1 font-medium">Rap Scannr</h1>
-      <p className="text-p font-black">
-        Explore rap flow, lyrical cadence, and vocal delivery through
-        interactive track analysis, flow visualization, and peak speed tracking
-      </p>
-      <button>
-        <Link to="login">Login</Link>
-      </button>
-      <button>
-        <Link to="register">Register</Link>
-      </button>
+    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center">
+      <div className="relative h-[60vh] max-h-[768px]">
+        <img src="/banner1.png" className="absolute top-0 w-screen max-w-[1920px] h-full object-cover"/>
+        <div className="absolute top-[80%] justify-self-center">
+          <h1 className="[grid-area:h1] text-h1 font-medium mb-3">Rap Scannr</h1>
+          <p className="[grid-area:p] text-p text-black w-[572px] mb-33">
+            Explore rap flow, lyrical cadence, and vocal delivery through
+            interactive track analysis, flow visualization, and peak speed tracking
+          </p>
+          <div className="[grid-area:button] flex gap-10">
+            <Link className="bg-black h-10 flex w-[222px]" to="login">
+              <p className={buttonp}>Login</p>
+            </Link>
+            <Link className="bg-grey h-10 flex w-[222px]" to="register">
+              <p className={buttonp}>Register</p>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
