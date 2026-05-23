@@ -15,7 +15,7 @@ export const Area1 = () => {
             Explore rap flow, lyrical cadence, and vocal delivery through
             interactive track analysis, flow visualization, and peak speed tracking
           </p>
-          <div className="[grid-area:button] flex gap-10">
+          <div className="[grid-area:button] flex gap-10 justify-self-end">
             <Link className="bg-black h-10 flex w-[222px]" to="login">
               <p className={buttonp}>Login</p>
             </Link>
