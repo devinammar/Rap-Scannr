@@ -9,7 +9,7 @@ export const Area1 = () => {
     <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center">
       <div className="relative h-[60vh] max-h-[768px]">
         <img src="/banner1.png" className="absolute top-0 w-screen max-w-[1920px] h-full object-cover"/>
-        <div className="absolute top-[80%] justify-self-center w-[calc(100vw-160px)] max-w-[calc(1920px-160px)]">
+        <div className="absolute top-full -translate-y-[24%] justify-self-center w-[calc(100vw-160px)] max-w-[calc(1920px-160px)]">
           <h1 className="[grid-area:h1] text-h1 font-medium mb-3">Rap Scannr</h1>
           <p className="[grid-area:p] text-p text-black w-[572px] mb-33">
             Explore rap flow, lyrical cadence, and vocal delivery through
