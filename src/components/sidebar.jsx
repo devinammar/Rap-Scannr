@@ -13,10 +13,14 @@ export const Sidebar = () => {
       </button> */}
 
       <button
-        className="hidden fixed top-3 left-6 bg-transparent cursor-pointer z-[1000] border-0 max-md:block"
+        className="hidden fixed top-[10px] left-6 bg-transparent cursor-pointer z-[1000] border-0 max-md:block"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <img className="w-6 h-6" src="/hamburgericon.png" alt="menu" />
+        <img
+          className="w-6 h-6"
+          src={isOpen ? "/hamburgericonblack.png" : "/hamburgericonwhite.png"}
+          alt="menu"
+        />
       </button>
 
       {isOpen && (
