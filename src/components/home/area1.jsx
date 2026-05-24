@@ -11,7 +11,7 @@ export const Area1 = () => {
         <img src="/banner1.png" className="absolute top-0 w-full max-w-[1920px] h-full object-cover"/>
         <div className="absolute top-full -translate-y-[30%] [@media(min-height:800px)]:-translate-y-[24%] justify-self-center w-[calc(100vw-160px)] max-w-[calc(1920px-160px)] max-[768px]:w-[calc(100vw-112px)] max-[480px]:w-[calc(100vw-64px)]">
           <h1 className="[grid-area:h1] text-h1 font-medium mb-3 max-[1024px]:text-h1-2 max-[768px]:text-h1-3 max-[640px]:text-h2 max-[640px]:w-[346px] max-[480px]:w-[216px]">Rap Scannr</h1>
-          <p className="[grid-area:p] text-p text-black w-[572px] mb-8 [@media(min-height:800px)]:mb-33 max-[860px]:w-[460px] max-[768px]:w-[346px] max-[480px]:w-[216px]">
+          <p className="[grid-area:p] text-p text-black w-[572px] mb-8 [@media(min-height:940px)]:mb-33 max-[860px]:w-[460px] max-[768px]:w-[346px] max-[480px]:w-[216px] max-[640px]:mb-19 max-[400px]:mb-12 max-[376px]:mb-5">
             Explore rap flow, lyrical cadence, and vocal delivery through
             interactive track analysis, flow visualization, and peak speed tracking
           </p>
