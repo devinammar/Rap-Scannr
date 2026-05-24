@@ -31,7 +31,7 @@ export const Sidebar = () => {
       )}
 
       <div
-        className={`border-r-[3px] border-(--color-black) fixed top-0 h-screen w-[240px] bg-(--color-white) z-[999] px-6 pt-[60px] pb-6 transition-all duration-300 ease-in-out max-md:block ${isOpen ? "left-0" : "-left-full"}`}
+        className={`border-r-[4px] border-(--color-black) fixed top-0 h-screen w-[240px] bg-(--color-white) z-[999] px-6 pt-[60px] pb-6 transition-all duration-300 ease-in-out max-md:block ${isOpen ? "left-0" : "-left-full"}`}
       >
         <ul className="list-none flex flex-col gap-4 p-0">
           <li className="listsidebar">
