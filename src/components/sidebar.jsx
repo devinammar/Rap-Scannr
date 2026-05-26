@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const listsidebarlink =
-    "text-(--color-black) text-(--text-p) font-semibold no-underline";
+    "text-(--color-black) text-(--text-p) font-medium no-underline";
 
   return (
     <>
