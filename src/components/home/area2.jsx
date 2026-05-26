@@ -1,7 +1,7 @@
 export const Area2 = () => {
   return (
-    <div className="mt-0">
-        <div><img src="/imagearea2.jpg" className="w-[560px] h-[560px]" /></div>
+    <div className="">
+        <div><img src="/imagearea2.jpg" className="w-[560px] h-[560px]"/></div>
       <div>
         <p>
           Rap Scannr is a rap music analysis platform designed to break down rap
