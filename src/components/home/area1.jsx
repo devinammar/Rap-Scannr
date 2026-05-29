@@ -6,7 +6,7 @@ export const Area1 = () => {
   "text-p text-white font-medium self-center ml-6 max-[480px]:ml-0"
 
   return (
-    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center pb-[400px]">
+    <div className="min-h-screen min-[1920px]:w-[1920px] min-[1920px]:justify-self-center">
       <div className="relative h-[60vh] max-h-[768px]">
         <img src="/banner1.png" className="absolute top-0 w-full max-w-[1920px] h-full object-cover"/>
         <div className="absolute top-full -translate-y-[30%] [@media(min-height:800px)]:-translate-y-[24%] justify-self-center w-[calc(100vw-160px)] max-w-[calc(1920px-160px)] max-[768px]:w-[calc(100vw-112px)] max-[480px]:w-[calc(100vw-64px)]">

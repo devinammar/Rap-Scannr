@@ -1,6 +1,6 @@
 export const Area2 = () => {
   return (
-    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center flex flex-row-reverse justify-between">
+    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center flex flex-row-reverse justify-between max-[640px]:mt-20">
         <div className="[grid-area:area2image]"><img src="/imagearea2.jpg" className="w-[560px]"/></div>
       <div className="[grid-area:area2h2andp] content-end flex flex-col justify-between pt-16 ml-20">
         <p className="text-p max-w-[542px]">
