@@ -1,9 +1,9 @@
 export const Area2 = () => {
   return (
-    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center flex flex-row-reverse justify-between max-[640px]:mt-20">
-        <div className="[grid-area:area2image]"><img src="/imagearea2.jpg" className="w-[560px]"/></div>
-      <div className="[grid-area:area2h2andp] content-end flex flex-col justify-between pt-16 ml-20">
-        <p className="text-p max-w-[542px]">
+    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center flex flex-row-reverse justify-between max-[640px]:mt-20 max-[640px]:grid max-[640px]:grid-cols-[auto] max-[640px]:grid-rows-[auto_auto_auto]">
+        <div className="w-[560px] max-[640px]:justify-self-center max-[640px]:w-screen"><img src="/imagearea2.jpg" className=""/></div>
+      <div className="content-end flex flex-col justify-between pt-16 max-[1120px]:pt-12 max-[768px]:pt-8 max-[640px]:pt-16 ml-20 mr-40 max-[900px]:mr-20 max-[768px]:ml-14 max-[480px]:ml-8">
+        <p className="text-p max-w-[542px] max-[1120px]:pb-16">
           Rap Scannr is a rap music analysis platform designed to break down rap
           flow, lyrical cadence and vocal delivery through interactive visual
           tracking. Users can analyze tracks from different artists and explore
