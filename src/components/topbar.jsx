@@ -1,19 +1,14 @@
 // ini hasil debug
 
 import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
-export const Topbar = () => {
+export const Topbar = ({ hidden }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrolled(currentScrollY > window.innerHeight * 0.6);
-      setHidden(currentScrollY > lastScrollY.current && currentScrollY > 100);
-      lastScrollY.current = currentScrollY;
+      setScrolled(window.scrollY > window.innerHeight * 0.6);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

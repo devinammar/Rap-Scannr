@@ -1,19 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export const Sidebar = () => {
+export const Sidebar = ({ hidden }) => {
   const [isOpen, setIsOpen] = useState(false);
   const listsidebarlink =
     "text-(--color-black) text-(--text-p) font-medium no-underline";
 
   return (
     <>
-      {/* <button id="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        ☰
-      </button> */}
-
       <button
-        className="hidden fixed top-[10px] left-6 bg-transparent cursor-pointer z-[1000] border-0 max-md:block"
+        className={`hidden fixed top-[10px] left-6 bg-transparent cursor-pointer z-[1000] border-0 max-md:block transition-transform duration-300 ${hidden ? "-translate-y-[200%]" : "translate-y-0"}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <img
@@ -34,42 +30,10 @@ export const Sidebar = () => {
         className={`border-r-[4px] border-(--color-black) fixed top-0 h-screen w-[240px] bg-(--color-white) z-[999] px-6 pt-[60px] pb-6 transition-all duration-300 ease-in-out max-md:block ${isOpen ? "left-0" : "-left-full"}`}
       >
         <ul className="list-none flex flex-col gap-4 p-0">
-          <li className="listsidebar">
-            <Link
-              className={listsidebarlink}
-              to="/"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-          </li>
-          <li className="listsidebar">
-            <Link
-              className={listsidebarlink}
-              to="/trackanalysis"
-              onClick={() => setIsOpen(false)}
-            >
-              Track Analysis
-            </Link>
-          </li>
-          <li className="listsidebar">
-            <Link
-              className={listsidebarlink}
-              to="/rapbattle"
-              onClick={() => setIsOpen(false)}
-            >
-              Rap Battle
-            </Link>
-          </li>
-          <li className="listsidebar">
-            <Link
-              className={listsidebarlink}
-              to="/profile"
-              onClick={() => setIsOpen(false)}
-            >
-              Profile
-            </Link>
-          </li>
+          <li><Link className={listsidebarlink} to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link className={listsidebarlink} to="/trackanalysis" onClick={() => setIsOpen(false)}>Track Analysis</Link></li>
+          <li><Link className={listsidebarlink} to="/rapbattle" onClick={() => setIsOpen(false)}>Rap Battle</Link></li>
+          <li><Link className={listsidebarlink} to="/profile" onClick={() => setIsOpen(false)}>Profile</Link></li>
         </ul>
       </div>
     </>
