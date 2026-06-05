@@ -4,6 +4,7 @@ import { Sidebar } from '../components/sidebar'
 import { Area1 } from '../components/home/area1'
 import { Area2 } from '../components/home/area2'
 import { Area3 } from '../components/home/area3'
+import { Area4 } from '../components/home/area4'
 
 export const Home = () => {
     const hidden = useHideOnScroll();
@@ -14,6 +15,7 @@ export const Home = () => {
             <Area1 />
             <Area2 />
             <Area3 />
+            <Area4 />
         </div>
     )
 }
