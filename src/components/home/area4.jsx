@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Area4 = () => {
   return (
-    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center grid justify-items-end mt-[248px]">
+    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center grid justify-items-end mt-[248px] px-20 max-[768px]:px-14 max-[480px]:px-8">
         <h2 className="text-h2 text-black font-medium pb-7">Our Features</h2>
         <div className="flex flex-wrap items-end">
         <Link className="order-2 pr-15">
