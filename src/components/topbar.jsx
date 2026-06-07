@@ -23,9 +23,9 @@ export const Topbar = ({ hidden }) => {
         className={`flex justify-center top-0 list-none text-p leading-none ${scrolled ? "bg-black/40" : "bg-white/40"} font-ragular pt-4 pb-4 gap-40 min-[1360px]:gap-50 max-[1024px]:gap-25 max-[768px]:py-[23px]`}
       >
         <li className={listtopbar}><Link to="/">Home</Link></li>
-        <li className={listtopbar}><Link to="/search">Track Analysis</Link></li>
-        <li className={listtopbar}><Link to="/searchbyimage">Rap Battle</Link></li>
-        <li className={listtopbar}><Link to="/about">Profile</Link></li>
+        <li className={listtopbar}><Link to="/trackanalysis">Track Analysis</Link></li>
+        <li className={listtopbar}><Link to="/rapbattle">Rap Battle</Link></li>
+        <li className={listtopbar}><Link to="/profile">Profile</Link></li>
       </ul>
     </div>
   );
