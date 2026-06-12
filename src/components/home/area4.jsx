@@ -4,7 +4,7 @@ export const Area4 = () => {
   const card1 = "relative w-90 max-[940px]:w-full h-[560px] max-[940px]:h-[400px] bg-cover bg-bottom group overflow-hidden";
   const card2 = "relative w-90 max-[940px]:w-full h-[560px] max-[940px]:h-[400px] bg-cover bg-center group overflow-hidden";
   const cardhover = "absolute inset-0 bg-black -translate-y-full group-hover:translate-y-0 transition-transform duration-300";
-  const cardhovertext = "absolute inset-0 flex px-8 pt-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300";
+  const cardhovertext = "absolute inset-0 flex px-8 pt-20 max-[816px]:pt-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300";
 
   return (
     <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center grid justify-items-end mt-[248px] px-20 max-[768px]:px-14 max-[480px]:px-8 max-[1192px]:w-fit max-[1192px]:justify-self-end max-[940px]:w-full max-[940px]:justify-self-stretch">
@@ -14,7 +14,8 @@ export const Area4 = () => {
           <div className={card1} style={{ backgroundImage: "url('/pexels-zachtheshoota-2067689.jpg')" }}>
             <div className={cardhover} />
             <div className={cardhovertext}>
-              <p className="text-white text-p">Penjelasan Track Analysis</p>
+              <p className="text-white text-p">Dive deeper into every verse and uncover the rhythm behind each performance with. <br /><br /> Interactive insights designed to highlight flow, pacing, and lyrical delivery in a
+clear and engaging way, making every track easier to explore and appreciate.</p>
             </div>
             <h3 className="text-h3 text-white font-medium px-8 pb-14 absolute bottom-0 z-10">Track Analysis</h3>
           </div>
@@ -23,14 +24,15 @@ export const Area4 = () => {
           <div className={card2} style={{ backgroundImage: "url('/pexels-din-127253222-14853507.jpg')" }}>
             <div className={cardhover} />
             <div className={cardhovertext}>
-              <p className="text-white text-p">Penjelasan Rap Battle</p>
+              <p className="text-white text-p">Put two rap performances side by side and discover how each artist stands out with. <br /><br /> Interactive comparisons that reveal differences in flow, rhythm, and delivery,
+offering a fresh perspective through a seamless and engaging experience.</p>
             </div>
             <h3 className="text-h3 text-white font-medium px-8 pb-14 absolute bottom-0 z-10">Rap Battle</h3>
           </div>
         </Link>
-        <p className="max-w-[580px] text-p order-1 mr-auto pr-19 max-[1192px]:order-3 max-[1192px]:pt-16 max-[1192px]:mr-0 max-[1192px]:hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+        <p className="max-w-[580px] text-p order-1 mr-auto pr-19 max-[1192px]:order-3 max-[1192px]:pt-16 max-[1192px]:mr-0 max-[1192px]:hidden">From single-track discoveries to head-to-head exploration, our interactive features are built to help you experience rap in a more engaging and meaningful way.</p>
       </div>
-       <p className="max-w-[580px] text-p order-1 mr-auto max-[460px]:pr-12 pr-19 hidden max-[1192px]:block max-[1192px]:order-3 max-[1192px]:pt-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+       <p className="max-w-[580px] text-p order-1 mr-auto max-[460px]:pr-12 pr-19 hidden max-[1192px]:block max-[1192px]:order-3 max-[1192px]:pt-16">From single-track discoveries to head-to-head exploration, our interactive features are built to help you experience rap in a more engaging and meaningful way.</p>
     </div>
   );
 };
