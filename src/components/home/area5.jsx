@@ -8,7 +8,7 @@ export const Area5 = () => {
   return (
     <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-61">
       <div
-        className="w-full h-[372px] bg-cover bg-center"
+        className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[1080px]:h-[260px] max-[768px]:h-[240px] bg-cover bg-center"
         style={{ backgroundImage: "url('/pexels-zachtheshoota-2067689.jpg')" }}>
       </div>
       <div className="flex px-20 max-[768px]:px-14 max-[480px]:px-8 pt-15 max-[768px]:justify-between max-[768px]:flex-col">
