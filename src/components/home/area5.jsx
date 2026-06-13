@@ -11,17 +11,21 @@ export const Area5 = () => {
         className="w-full h-[372px] bg-cover bg-center"
         style={{ backgroundImage: "url('/pexels-zachtheshoota-2067689.jpg')" }}>
       </div>
-      <button id="previous" onClick={() => setIsOpen(!isOpen)}> {/* ini sama sekali blm bener */}
-        <img src="/hamburgericon2.png" alt="previous" />
+      <div className="flex px-20 max-[768px]:px-14 max-[480px]:px-8 pt-15 max-[768px]:justify-between max-[768px]:flex-col">
+        <div className="flex gap-16 order-1 max-[768px]:order-1 max-[768px]:pb-10 items-start">
+      <button className="w-16">
+        <img src="/previous.png" alt="previous" />
       </button>
-      <button id="next" onClick={() => setIsOpen(!isOpen)}> {/* ini sama sekali blm bener */}
-        <img src="/hamburgericon2.png" alt="next" />
+      <button className="w-16">
+        <img src="/next.png" alt="next" />
       </button>
-      <div>
-        <p>tes</p>
+      </div>
+      <div className="order-2 max-[768px]:order-2 ml-80 max-[1720px]:ml-74 max-[1480px]:ml-60 max-[1280px]:ml-50 max-[1030px]:ml-40 max-[768px]:ml-0">
+        <p className="pb-10">tes</p>
         <Link className="bg-black h-10 flex w-[222px] hover:bg-black/50 max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full justify-center" to="about">
           <p className={buttonp}>Learn More</p>
         </Link>
+        </div>
       </div>
     </div>
   );

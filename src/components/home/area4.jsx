@@ -30,9 +30,9 @@ offering a fresh perspective through a seamless and engaging experience.</p>
             <h3 className="text-h3 text-white font-medium px-8 pb-14 absolute bottom-0 z-10">Rap Battle</h3>
           </div>
         </Link>
-        <p className="max-w-[580px] text-p order-1 mr-auto pr-19 max-[1192px]:order-3 max-[1192px]:pt-16 max-[1192px]:mr-0 max-[1192px]:hidden">From single-track discoveries to head-to-head exploration, our interactive features are built to help you experience rap in a more engaging and meaningful way.</p>
+        <p className="max-w-[580px] text-p order-1 mr-auto pr-19 max-[1192px]:order-3 max-[1192px]:pt-15 max-[1192px]:mr-0 max-[1192px]:hidden">From single-track discoveries to head-to-head exploration, our interactive features are built to help you experience rap in a more engaging and meaningful way.</p>
       </div>
-       <p className="max-w-[580px] text-p order-1 mr-auto max-[460px]:pr-12 pr-19 hidden max-[1192px]:block max-[1192px]:order-3 max-[1192px]:pt-16">From single-track discoveries to head-to-head exploration, our interactive features are built to help you experience rap in a more engaging and meaningful way.</p>
+       <p className="max-w-[580px] text-p order-1 mr-auto max-[460px]:pr-12 pr-19 hidden max-[1192px]:block max-[1192px]:order-3 max-[1192px]:pt-15">From single-track discoveries to head-to-head exploration, our interactive features are built to help you experience rap in a more engaging and meaningful way.</p>
     </div>
   );
 };
