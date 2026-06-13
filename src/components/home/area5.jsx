@@ -6,7 +6,7 @@ export const Area5 = () => {
   const buttonp = "text-p text-white font-medium self-center ml-0 max-[480px]:ml-0";
 
   return (
-    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-61">
+    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-62 max-[1024px]:mt-52 max-[768px]:mt-46">
       <div
         className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[1080px]:h-[260px] max-[768px]:h-[240px] bg-cover bg-center"
         style={{ backgroundImage: "url('/pexels-zachtheshoota-2067689.jpg')" }}>

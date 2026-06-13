@@ -7,7 +7,7 @@ export const Area4 = () => {
   const cardhovertext = "absolute inset-0 flex px-8 pt-20 max-[816px]:pt-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300";
 
   return (
-    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center grid justify-items-end mt-[248px] px-20 max-[768px]:px-14 max-[480px]:px-8 max-[1192px]:w-fit max-[1192px]:justify-self-end max-[940px]:w-full max-[940px]:justify-self-stretch">
+    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center grid justify-items-end mt-62 max-[1024px]:mt-52 max-[768px]:mt-46 px-20 max-[768px]:px-14 max-[480px]:px-8 max-[1192px]:w-fit max-[1192px]:justify-self-end max-[940px]:w-full max-[940px]:justify-self-stretch">
         <h2 className="text-h2 max-[640px]:text-h2-2 max-[320px]:text-h2-3 text-black font-medium pb-7">Our Features</h2>
         <div className="flex flex-nowrap items-end max-[1192px]:flex-wrap max-[940px]:w-full">
         <Link to="/trackanalysis" className="order-2 pr-15 max-[1192px]:order-1 max-[940px]:w-full max-[940px]:pr-0 max-[940px]:pb-16 max-[768px]:pb-12 max-[520px]:pb-9">
