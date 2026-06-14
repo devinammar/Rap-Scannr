@@ -38,6 +38,18 @@ export const Area5 = () => {
     }
   }, []);
 
+   // buat ngecek loading effect waktu ngeload gambar dan teks p dari sanity
+
+   //   useEffect(() => {
+   //   if (USE_CMS) {
+   //     client
+   //       .fetch(`*[_type == "banner"] | order(order asc)`)
+   //       .then(data => {
+   //         setTimeout(() => setSlides(data), 3000);
+   //       });
+   //   }
+   // }, []);
+
   const prev = () => setCurrent(i => (i - 1 + slides.length) % slides.length);
   const next = () => setCurrent(i => (i + 1) % slides.length);
 
