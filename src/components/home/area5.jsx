@@ -41,18 +41,16 @@ export const Area5 = () => {
   const prev = () => setCurrent(i => (i - 1 + slides.length) % slides.length);
   const next = () => setCurrent(i => (i + 1) % slides.length);
 
-  if (!slides.length) return <div>Loading...</div>;
-
   const currentSlide = slides[current];
   const bgImage = USE_CMS
-    ? urlFor(currentSlide.image).url()
-    : currentSlide.image;
+    ? (currentSlide ? urlFor(currentSlide.image).url() : '')
+    : currentSlide?.image;
 
   return (
     <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-62 max-[1024px]:mt-52 max-[768px]:mt-46">
       <div
-        className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[1080px]:h-[260px] max-[768px]:h-[240px] bg-cover bg-center"
-        style={{ backgroundImage: `url('${bgImage}')` }}
+        className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[1080px]:h-[260px] max-[768px]:h-[240px] bg-cover bg-center bg-gray-200"
+        style={{ backgroundImage: bgImage ? `url('${bgImage}')` : 'none' }}
       />
       <div className="flex px-20 max-[768px]:px-14 max-[480px]:px-8 pt-15 max-[768px]:justify-between max-[768px]:flex-col">
         <div className="flex gap-16 order-1 max-[768px]:order-1 max-[768px]:pb-10 items-start">
@@ -66,7 +64,7 @@ export const Area5 = () => {
           </button>
         </div>
         <div className="order-2 max-[768px]:order-2 ml-80 max-[1720px]:ml-74 max-[1480px]:ml-60 max-[1280px]:ml-50 max-[1030px]:ml-40 max-[768px]:ml-0">
-          <p className="pb-30">{currentSlide.caption}</p>
+          <p className="pb-30">{currentSlide ? currentSlide.caption : 'Loading...'}</p>
           <Link className="bg-black h-10 flex w-[222px] hover:bg-black/50 max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full justify-center" to="about">
             <p className={buttonp}>Learn More</p>
           </Link>
