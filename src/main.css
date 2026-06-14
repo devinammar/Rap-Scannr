@@ -34,3 +34,14 @@
     justify-self: center;
   }
 }
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+.slide-in-right { animation: slideInRight 0.4s ease; }
+.slide-in-left { animation: slideInLeft 0.4s ease; }
