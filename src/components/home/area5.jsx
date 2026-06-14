@@ -33,6 +33,7 @@ export const Area5 = () => {
   const [slides, setSlides] = useState(USE_CMS ? [] : dummySlides);
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(null); // state buat arah animasi slide (sliding efek)
+  const [prevImage, setPrevImage] = useState(null); // state buat nampilin gambar banner sebelumnya saat animasi slide (sliding efek)
   const buttonp =
     "text-p text-white font-medium self-center ml-0 max-[480px]:ml-0";
 
@@ -63,14 +64,14 @@ export const Area5 = () => {
 
   // biar ada efek sliding waktu pindah konten (banner dan p)
   const prev = () => {
-    setPrevImage(bgImage); // BARU
+    setPrevImage(bgImage);
     setDirection("left");
     setCurrent((i) => (i - 1 + slides.length) % slides.length);
   };
 
   // biar ada efek sliding waktu pindah konten (banner dan p)
   const next = () => {
-    setPrevImage(bgImage); // BARU
+    setPrevImage(bgImage);
     setDirection("right");
     setCurrent((i) => (i + 1) % slides.length);
   };
