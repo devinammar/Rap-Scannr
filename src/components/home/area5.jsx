@@ -6,16 +6,20 @@ import { Link } from 'react-router-dom';
 const slides = [
   {
     image: '/pexels-zachtheshoota-2067689.jpg',
-    caption: 'Keterangan banner pertama'
+    caption: "Rap Scannr is built for those who hear more than just a beat. Every bar, every rhyme, every flow carries something worth digging into. From word choice to lyrical structure, we break it all down so you can understand what makes a rap track truly stand out. Want to know how deep the meaning goes behind your favorite song? Rap Scannr's Track Analysis unpacks it all, layer by layer, word by word, brick by brick. Because rap isn't just music. Rap is a language"
   },
   {
     image: '/pexels-din-127253222-14853507.jpg',
-    caption: 'Keterangan banner kedua'
+    caption: "Two songs. One arena. Rap Scannr's Rap Battle feature is built for those who want real answers, not just opinions. Compare flow, complexity, and lyrical depth across two tracks side by side. Does the classic still hold up against the new wave? Who hits harder on paper? Who's more technically sharp when you strip away the hype? Drop two songs into Rap Scannr and let the analysis speak for itself, bar by bar, track by track. Because in rap, the truth is always in the lyrics."
   },
   {
     image: '/pexels-erick-richards-2112514569-30316347.jpg',
-    caption: 'Keterangan banner ketiga'
+    caption: "Rap is never just rhymes that sound good on a beat. Behind every track there are layers wordplay, metaphor, internal rhyme schemes, and cultural references that are easy to miss on the first listen. Rap Scannr is built for those who want to go deeper than the surface. Our Track Analysis breaks down every element in full detail, from word selection to recurring themes, from delivery patterns to the meaning buried deep between the bars. Your music, finally understood."
   },
+  {
+    image: '/pexels-erick-richards-2112514569-30316347.jpg',
+    caption: "Rap carries a long history written into every lyric ever recorded. From the golden age to the current generation, every song is a cultural document worth reading more carefully than most people do. Rap Scannr lets you trace that evolution compare tracks across different eras, artists, and styles to see what has changed and what has stayed the same. Because understanding rap means understanding the journey of an entire culture, one bar at a time."
+  }
 ];
 
 export const Area5 = () => {
@@ -43,7 +47,7 @@ export const Area5 = () => {
           </button>
         </div>
         <div className="order-2 max-[768px]:order-2 ml-80 max-[1720px]:ml-74 max-[1480px]:ml-60 max-[1280px]:ml-50 max-[1030px]:ml-40 max-[768px]:ml-0">
-          <p className="pb-10">{slides[current].caption}</p>
+          <p className="pb-30">{slides[current].caption}</p>
           <Link className="bg-black h-10 flex w-[222px] hover:bg-black/50 max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full justify-center" to="about">
             <p className={buttonp}>Learn More</p>
           </Link>
