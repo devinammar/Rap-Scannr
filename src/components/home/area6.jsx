@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 export const Area6 = () => {
-  const buttonsendmassage =
+  const buttonsendmessage =
     "text-p text-white font-medium self-center ml-6 max-[480px]:ml-0";
   const buttoncall =
     "text-p text-black font-medium self-center ml-6 max-[480px]:ml-0";
@@ -13,7 +13,7 @@ export const Area6 = () => {
     <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-62 max-[1024px]:mt-52 max-[768px]:mt-46 h-140 flex gap-15"> {/* gap belum diatur responsive (baru gap-15) */}
       <div
         id="imageleft"
-        className="bg-cover bg-center h-full w-[480px] shrink-0"
+        className="bg-cover bg-center h-full w-[480px] shrink-0 max-[1440px]:w-[440px] max-[1400px]:w-[400px] max-[1360px]:w-[380px] max-[1340px]:w-[340px] max-[1300px]:w-[300px]"
         style={{ backgroundImage: "url('/pexels-introspectivedsgn-7464823.jpg')" }}
       >
         <Link to="/">
@@ -22,7 +22,7 @@ export const Area6 = () => {
       </div>
       <div id="footer" className="bg-grey w-full flex flex-col">
         <div className="mx-auto px-20 flex flex-col justify-between h-full">
-          <div id="list" className="flex gap-18 pt-23"> {/* ini gap antar list blm dibenerin (terutama utk responsivitas) */}
+          <div id="list" className="flex gap-18 pt-23 min-[1600px]:gap-26 min-[1780px]:gap-33 min-[1860px]:gap-39"> {/* ini gap antar list blm dibenerin (terutama utk responsivitas) */}
             <div className="listarea1">
               <h3 className="text-h3 font-medium text-white pb-13">Company</h3>
               <ul className="flex flex-col gap-2">
@@ -38,7 +38,7 @@ export const Area6 = () => {
                 <li className={sublist}><Link to="/">Privacy & Policy</Link></li>
                 <li className={sublist}><Link to="/">Terms of Service</Link></li>
                 <li className={sublist}><Link to="/">Cookie Policy</Link></li>
-                <li className={sublist}><Link to="/">Lisence</Link></li>
+                <li className={sublist}><Link to="/">Licence</Link></li>
               </ul>
             </div>
             <div className="listarea3">
@@ -60,12 +60,12 @@ export const Area6 = () => {
               </ul>
             </div>
           </div>
-          <div id="2button" className="flex gap-10 max-[480px]:gap-8 pb-23"> {/* gap belum diatur responsive (baru gap-15) */}
+          <div id="2button" className="flex gap-10 pb-23 min-[1640px]:gap-14"> {/* gap belum diatur responsive (baru gap-15) */}
             <Link
               className="bg-black h-10 flex w-[222px] hover:bg-white group max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full max-[480px]:justify-center"
               to=""
             >
-              <p className={`${buttonsendmassage} group-hover:text-black`}>Send Massage</p>
+              <p className={`${buttonsendmessage} group-hover:text-black`}>Send Message</p>
             </Link>
             <Link
               className="bg-white h-10 flex w-[222px] hover:bg-black group max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full max-[480px]:justify-center"
