@@ -6,7 +6,7 @@ Lorem ipsum.
 
 Click this to open the website :
 
-[![Flant](https://img.shields.io/badge/Rap%20Scannr-Visit-black)](https:)
+[![Flant](https://img.shields.io/badge/Rap%20Scannr-Visit-white)](https:)
 
 Or you can copy this link and paste it into your browser:
 
