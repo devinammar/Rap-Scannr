@@ -62,16 +62,16 @@ export const Area6 = () => {
           </div>
           <div id="2button" className="flex gap-10 pb-23 min-[1640px]:gap-14"> {/* gap belum diatur responsive (baru gap-15) */}
             <Link
-              className="bg-black h-10 flex w-[222px] hover:bg-white group max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full max-[480px]:justify-center"
+              className="bg-black h-10 flex w-[222px] hover:bg-white/50 group max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full max-[480px]:justify-center"
               to=""
             >
               <p className={`${buttonsendmessage} group-hover:text-black`}>Send Message</p>
             </Link>
             <Link
-              className="bg-white h-10 flex w-[222px] hover:bg-black group max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full max-[480px]:justify-center"
+              className="bg-white h-10 flex w-[222px] hover:bg-white/50 group max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full max-[480px]:justify-center"
               to=""
             >
-              <p className={`${buttoncall} group-hover:text-white`}>Call Now</p>
+              <p className={`${buttoncall} group-hover:text-black`}>Call Now</p>
             </Link>
           </div>
         </div>
