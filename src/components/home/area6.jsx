@@ -33,15 +33,6 @@ export const Area6 = () => {
               </ul>
             </div>
             <div className="listarea2">
-              <h3 className="text-h3 font-medium text-white pb-13">Contact</h3>
-              <ul className="flex flex-col gap-2">
-                <li className={sublist}><Link to="/">Github</Link></li>
-                <li className={sublist}><Link to="/">Email</Link></li>
-                <li className={sublist}><Link to="/">LinkedIn</Link></li>
-                <li className={sublist}><Link to="/">Instagram</Link></li>
-              </ul>
-            </div>
-            <div className="listarea3">
               <h3 className="text-h3 font-medium text-white pb-13">Legal & Policy</h3>
               <ul className="flex flex-col gap-2">
                 <li className={sublist}><Link to="/">Privacy & Policy</Link></li>
@@ -50,13 +41,22 @@ export const Area6 = () => {
                 <li className={sublist}><Link to="/">Lisence</Link></li>
               </ul>
             </div>
+            <div className="listarea3">
+              <h3 className="text-h3 font-medium text-white pb-13">Resource</h3>
+              <ul className="flex flex-col gap-2">
+                <li className={sublist}><Link to="/">API Resource</Link></li>
+                <li className={sublist}><Link to="/">Photo Stocks</Link></li>
+                <li className={sublist}><Link to="/">Articles</Link></li>
+                <li className={sublist}><Link to="/">Tech Stack</Link></li>
+              </ul>
+            </div>
             <div className="listarea4">
               <h3 className="text-h3 font-medium text-white pb-13">About</h3>
               <ul className="flex flex-col gap-2">
                 <li className={sublist}><Link to="/">About Rap Scannr</Link></li>
                 <li className={sublist}><Link to="/">Features</Link></li>
                 <li className={sublist}><Link to="/">How it Works</Link></li>
-                <li className={sublist}><Link to="/">Tech Stack</Link></li>
+                <li className={sublist}><Link to="/">Blog</Link></li>
               </ul>
             </div>
           </div>
