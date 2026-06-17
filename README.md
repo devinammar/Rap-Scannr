@@ -1,5 +1,19 @@
 on progress
 
+# Rap Scannr
+
+Lorem ipsum.
+
+Click this to open the website :
+
+[![Flant](https://img.shields.io/badge/Rap%20Scannr-Visit-black)](https:)
+
+Or you can copy this link and paste it into your browser:
+
+```
+https:/
+```
+
 ## 🛠️ Tech Stack
 
 - ### HTML, Tailwind CSS, ReactJS + Vite
