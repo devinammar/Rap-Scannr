@@ -14,6 +14,14 @@ Or you can copy this link and paste it into your browser:
 https:/
 ```
 
+## ✨ Features
+
+## 🧩 Problem
+
+## 💡 Solution
+
+## 📋 Software Development Life Cycle (SDLC)
+
 ## 🛠️ Tech Stack
 
 - ### HTML, Tailwind CSS, ReactJS + Vite
