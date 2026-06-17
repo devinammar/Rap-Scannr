@@ -19,7 +19,7 @@ export const Area6 = () => {
         </Link>
       </div>
       <div id="footer" className="bg-grey w-full flex flex-col">
-        <div className="mx-auto">
+        <div className="mx-auto px-20">
          <div id="list" className="flex gap-18 pt-23"> {/* ini gap antar list blm dibenerin (terutama utk responsivitas) */}
             <div className="listarea1">
               <h3 className="text-h3 font-medium text-white pb-13">Company</h3>
