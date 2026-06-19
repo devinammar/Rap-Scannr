@@ -61,28 +61,28 @@ export const Area6 = () => {
             </div>
           </div>
           <div className="flex gap-7 pb-9 max-[530px]:pb-15 max-[530px]:justify-center max-[530px]:pr-14 max-[480px]:pr-8">
-            <Link className="">
+            <Link to="https://www.github.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="/github.png"
               className="w-9"
               alt="github"
             />
             </Link>
-            <Link className="">
+            <Link to="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="/instagram.png"
               className="w-9"
               alt="instagram"
             />
             </Link>
-            <Link className="">
+            <Link to="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="/facebook.png"
               className="w-9"
               alt="facebook"
             />
             </Link>
-            <Link className="">
+            <Link to="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
             <img
               src="/linkedin.png"
               className="w-9"
