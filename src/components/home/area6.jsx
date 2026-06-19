@@ -10,7 +10,7 @@ export const Area6 = () => {
   const sublist = "text-p text-white";
 
   return (
-    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-62 max-[1024px]:mt-52 max-[768px]:mt-46 h-140 flex gap-15 max-[1280px]:flex-col"> {/* gap belum diatur responsive (baru gap-15) */}
+    <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-62 max-[1024px]:mt-52 max-[768px]:mt-46 h-140 flex gap-15 max-[1280px]:flex-col">
       <div
         id="imageleft"
         className="bg-cover bg-center h-full w-[480px] shrink-0 max-[1440px]:w-[440px] max-[1400px]:w-[400px] max-[1360px]:w-[380px] max-[1340px]:w-[340px] max-[1300px]:w-[300px] max-[1280px]:w-full max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[1080px]:h-[260px] max-[768px]:h-[240px]"
@@ -21,8 +21,8 @@ export const Area6 = () => {
         </Link>
       </div>
       <div id="footer" className="bg-grey w-full flex flex-col">
-        <div className="mx-auto px-20 flex flex-col justify-between h-full">
-          <div id="list" className="flex gap-18 pt-23 min-[1600px]:gap-26 min-[1780px]:gap-33 min-[1860px]:gap-39"> {/* ini gap antar list blm dibenerin (terutama utk responsivitas) */}
+        <div className="mx-auto px-20 py-23 flex flex-col justify-between h-full max-[1280px]:h-140">
+          <div id="list" className="flex gap-18 min-[1600px]:gap-26 min-[1780px]:gap-33 min-[1860px]:gap-39 max-[1280px]:gap-39 max-[1240px]:gap-36 max-[1192px]:gap-30"> {/* ini gap antar list blm dibenerin (terutama utk responsivitas) */}
             <div className="listarea1">
               <h3 className="text-h3 font-medium text-white pb-13">Company</h3>
               <ul className="flex flex-col gap-2">
@@ -60,7 +60,37 @@ export const Area6 = () => {
               </ul>
             </div>
           </div>
-          <div id="2button" className="flex gap-10 pb-23 min-[1640px]:gap-14"> {/* gap belum diatur responsive (baru gap-15) */}
+          <div className="flex gap-7 py-8">
+            <Link className="">
+            <img
+              src="/github.png"
+              className="w-10"
+              alt="github"
+            />
+            </Link>
+            <Link className="">
+            <img
+              src="/instagram.png"
+              className="w-10"
+              alt="instagram"
+            />
+            </Link>
+            <Link className="">
+            <img
+              src="/facebook.png"
+              className="w-10"
+              alt="facebook"
+            />
+            </Link>
+            <Link className="">
+            <img
+              src="/linkedin.png"
+              className="w-10"
+              alt="linkedin"
+            />
+            </Link>
+          </div>
+          <div id="2button" className="flex gap-10 min-[1640px]:gap-14"> {/* gap belum diatur responsive (baru gap-15) */}
             <Link
               className="bg-black h-10 flex w-[222px] hover:bg-white/50 group max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full max-[480px]:justify-center"
               to=""
