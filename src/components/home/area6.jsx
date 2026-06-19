@@ -21,10 +21,10 @@ export const Area6 = () => {
         </Link>
       </div>
       <div id="footer" className="bg-grey w-full flex flex-col">
-        <div className="mx-auto px-20 py-23 flex flex-col justify-between h-full max-[1280px]:h-140">
-          <div id="list" className="flex gap-18 min-[1600px]:gap-26 min-[1780px]:gap-33 min-[1860px]:gap-39 max-[1280px]:gap-39 max-[1240px]:gap-36 max-[1192px]:gap-30"> {/* ini gap antar list blm dibenerin (terutama utk responsivitas) */}
+        <div className="mx-auto px-20 py-18 flex flex-col justify-between h-full max-[1280px]:h-140">
+          <div id="list" className="flex gap-18 pb-20 min-[1600px]:gap-26 min-[1780px]:gap-34 min-[1860px]:gap-40 max-[1280px]:gap-40 max-[1240px]:gap-36 max-[1192px]:gap-30"> {/* ini gap antar list blm dibenerin (terutama utk responsivitas) */}
             <div className="listarea1">
-              <h3 className="text-h3 font-medium text-white pb-13">Company</h3>
+              <h3 className="text-h3 font-medium text-white pb-10">Company</h3>
               <ul className="flex flex-col gap-2">
                 <li className={sublist}><Link to="/">About Us</Link></li>
                 <li className={sublist}><Link to="/">Partners</Link></li>
@@ -33,7 +33,7 @@ export const Area6 = () => {
               </ul>
             </div>
             <div className="listarea2">
-              <h3 className="text-h3 font-medium text-white pb-13">Legal & Policy</h3>
+              <h3 className="text-h3 font-medium text-white pb-10">Legal & Policy</h3>
               <ul className="flex flex-col gap-2">
                 <li className={sublist}><Link to="/">Privacy & Policy</Link></li>
                 <li className={sublist}><Link to="/">Terms of Service</Link></li>
@@ -42,7 +42,7 @@ export const Area6 = () => {
               </ul>
             </div>
             <div className="listarea3">
-              <h3 className="text-h3 font-medium text-white pb-13">Resource</h3>
+              <h3 className="text-h3 font-medium text-white pb-10">Resource</h3>
               <ul className="flex flex-col gap-2">
                 <li className={sublist}><Link to="/">API Resource</Link></li>
                 <li className={sublist}><Link to="/">Photo Stocks</Link></li>
@@ -51,7 +51,7 @@ export const Area6 = () => {
               </ul>
             </div>
             <div className="listarea4">
-              <h3 className="text-h3 font-medium text-white pb-13">About</h3>
+              <h3 className="text-h3 font-medium text-white pb-10">About</h3>
               <ul className="flex flex-col gap-2">
                 <li className={sublist}><Link to="/">About Rap Scannr</Link></li>
                 <li className={sublist}><Link to="/">Features</Link></li>
@@ -60,32 +60,32 @@ export const Area6 = () => {
               </ul>
             </div>
           </div>
-          <div className="flex gap-7 py-8">
+          <div className="flex gap-7 pb-8">
             <Link className="">
             <img
               src="/github.png"
-              className="w-10"
+              className="w-9"
               alt="github"
             />
             </Link>
             <Link className="">
             <img
               src="/instagram.png"
-              className="w-10"
+              className="w-9"
               alt="instagram"
             />
             </Link>
             <Link className="">
             <img
               src="/facebook.png"
-              className="w-10"
+              className="w-9"
               alt="facebook"
             />
             </Link>
             <Link className="">
             <img
               src="/linkedin.png"
-              className="w-10"
+              className="w-9"
               alt="linkedin"
             />
             </Link>
