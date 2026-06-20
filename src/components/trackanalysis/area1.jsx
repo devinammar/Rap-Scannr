@@ -20,7 +20,7 @@
 
 // ___________________________________________________________
 
-// ini bikinan sendiri juga tapi diedit-edit lagi
+// ini bikinan sendiri juga, tapi diedit-edit lagi
 
 import { Staticbanner } from '../staticbanner'
 import { Searchbar } from '../searchbar'
@@ -34,6 +34,12 @@ export const Area1 = () => {
             <Searchbar showButton={true} />
             <p className="text-p text-black pt-9 pl-[15vw] min-[1920px]:pl-[288px] min-[1920px]:w-[960px] max-[1920px]:w-[calc(100vw-50vw)]">Explore rap flow, lyrical cadence, and vocal delivery through interactive track analysis, flow visualization, and peak speed tracking</p> {/* pl-[15vw] */}
             </div>
+            <Staticbanner />
+            <Staticbanner />
+            <Staticbanner />
+            <Staticbanner />
+            <Staticbanner />
+            <Staticbanner />
         </div>
     )
 }
