@@ -9,7 +9,7 @@ export const Area1 = () => {
             <Staticbanner />
             <Staticbanner />
             <Staticbanner />
-            <Searchbar />
+            <Searchbar showButton={true} />
         </div>
     )
 }
