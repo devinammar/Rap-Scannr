@@ -25,6 +25,7 @@
     line-height: 1.7;  /* default: 1.5 */
     letter-spacing: 0.02em;
     background-color: var(--color-white);
+    scrollbar-gutter: stable;
   }
 }
 
