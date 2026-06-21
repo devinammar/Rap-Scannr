@@ -29,7 +29,7 @@ export const Area1 = () => {
     return (
         <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-[10vh]">
             <Staticbanner className="relative"/>
-            <div className="z-10 absolute justify-self-center top-48 w-full max-w-[1920px]">
+            <div className="z-10 absolute justify-self-center top-48 max-[1280px]:top-35 max-[1024px]:top-28 w-full max-w-[1920px]">
             <h2 className="flex justify-center text-h2 max-[640px]:text-h2-2 max-[320px]:text-h2-3 text-white font-medium pb-11">Track Analysis</h2>
             <Searchbar showButton={true} />
             <p className="text-p text-black pt-9 pl-[15vw] min-[1920px]:pl-[288px] min-[1920px]:w-[960px] max-[1920px]:w-[calc(100vw-50vw)] max-[1154px]:pl-0 max-[1154px]:w-[calc(100vw-30vw)] max-[1154px]:mx-auto max-[1154px]:text-center">Explore rap flow, lyrical cadence, and vocal delivery through interactive track analysis, flow visualization, and peak speed tracking</p> {/* pl-[15vw] */}
