@@ -23,7 +23,7 @@ https:/
 ## 📋 Software Development Life Cycle (SDLC)
 
 ## 🏗️ Software Architecture
-![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/d707671b0a975c6c0328d66710b47dab35e061d9/Architecture%202.jpg.jpg)
+![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/67d2c7107f3ddfb32fdb8515e75791ed1b8068c4/Software%20Architecture.jpg)
 
 ## 🛠️ Tech Stack
 
