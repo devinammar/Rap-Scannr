@@ -28,7 +28,7 @@ import { Searchbar } from '../searchbar'
 export const Area1 = () => {
     return (
         <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-[10vh]">
-            <Staticbanner className="relative"/>
+            <Staticbanner image="/pexels-zachtheshoota-2067689.jpg" className="relative" />
             <div className="z-10 absolute justify-self-center top-48 max-[1280px]:top-35 max-[1024px]:top-28 max-[640px]:top-33 max-[530px]:top-38 w-full max-w-[1920px]">
             <h2 className="flex justify-center text-h2 max-[640px]:text-h2-2 max-[530px]:text-h2-3 text-white font-medium pb-11">Track Analysis</h2> {/* max-[430px]:px-[16vw] */}
             <Searchbar showButton={true} />
