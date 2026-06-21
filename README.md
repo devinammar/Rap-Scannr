@@ -32,3 +32,11 @@ https:/
   [Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1)
   
 - ### Adobe Photoshop
+
+All stock photos used for this project are from Pexels and Unsplash
+
+<i> Copyright © 2026 devinammar. All rights reserved.
+
+This repository is publicly visible. You are free to view the source code and use the live website as an end user.
+
+However, no part of this codebase may be copied, modified, distributed, sublicensed, or used to create derivative works without explicit written permission from the copyright holder.</i>
