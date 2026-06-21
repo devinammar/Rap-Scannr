@@ -2,7 +2,7 @@ import { useHideOnScroll } from '../hooks/useHideOnScroll'
 import { Topbar } from '../components/topbar'
 import { Sidebar } from '../components/sidebar'
 
-export const About = () => {
+export const Profile = () => {
     const hidden = useHideOnScroll();
     return (
         <div className="relative">
