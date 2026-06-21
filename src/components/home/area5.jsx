@@ -92,7 +92,7 @@ export const Area5 = () => {
       /> */}
 
       {/* banner dengan sliding efek */}
-      <div className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[1080px]:h-[260px] max-[768px]:h-[240px] overflow-hidden relative">
+      <div className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[768px]:h-[240px] overflow-hidden relative">
         {prevImage && (
           <div
             className="absolute inset-0 bg-cover bg-center"

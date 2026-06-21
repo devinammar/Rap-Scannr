@@ -13,7 +13,7 @@ export const Area6 = () => {
     <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-62 max-[1024px]:mt-52 max-[768px]:mt-46 h-140 flex gap-15 max-[1280px]:flex-col">
       <div
         id="imageleft"
-        className="bg-cover bg-center h-full w-[480px] shrink-0 max-[1440px]:w-[440px] max-[1400px]:w-[400px] max-[1360px]:w-[380px] max-[1340px]:w-[340px] max-[1300px]:w-[300px] max-[1280px]:w-full max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[1080px]:h-[260px] max-[768px]:h-[240px]"
+        className="bg-cover bg-center h-full w-[480px] shrink-0 max-[1440px]:w-[440px] max-[1400px]:w-[400px] max-[1360px]:w-[380px] max-[1340px]:w-[340px] max-[1300px]:w-[300px] max-[1280px]:w-full max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[768px]:h-[240px]"
         style={{ backgroundImage: "url('/pexels-introspectivedsgn-7464823.jpg')" }}
       >
         <Link to="/">
