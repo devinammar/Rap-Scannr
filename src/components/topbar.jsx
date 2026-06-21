@@ -19,7 +19,8 @@ export const Topbar = ({ hidden }) => {
     const checkOverlap = () => {
       const topbarHeight = topbarRef.current?.offsetHeight ?? 0;
       const rect = bannerEl.getBoundingClientRect();
-      setOverBanner(rect.bottom > 0 && rect.top < topbarHeight);
+      setOverBanner(rect.top <= 0 && rect.bottom >= topbarHeight); {/* detectnya jika seluruh topbar sudah nutupin banner, baru ganti warna. bukan asal kesentuh dikit langsung ganti */}
+      // setOverBanner(rect.bottom > 0 && rect.top < topbarHeight); detectnya jika asal kesentuh dikit, langsung ganti warna
     };
 
     checkOverlap();
@@ -37,7 +38,7 @@ export const Topbar = ({ hidden }) => {
   return (
     <div
       ref={topbarRef}
-      className={`fixed top-0 w-full z-10 transition-transform duration-300 ${
+      className={`fixed top-0 w-full z-11 transition-transform duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
