@@ -22,6 +22,8 @@ https:/
 
 ## 📋 Software Development Life Cycle (SDLC)
 
+## 🏗️ Software Architecture
+
 ## 🛠️ Tech Stack
 
 - ### HTML, Tailwind CSS, ReactJS + Vite
