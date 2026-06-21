@@ -3,9 +3,11 @@
 // ___________________________________________________
 
 
-// ini hasil debug
+// ini hasil debug 
 
-import { Link } from "react-router-dom";
+// ini blm bener btw, di track analysis page & rap battle page
+
+import { BrowserRouter, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export const Topbar = ({ hidden }) => {
