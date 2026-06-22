@@ -22,6 +22,9 @@ https:/
 
 ## 📋 Software Development Life Cycle (SDLC)
 
+## 🏗️ Software Architecture
+![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/cb4d6edaa730a9c35edfb3887276a60ce019631d/Software%20Architecture.jpg)
+
 ## 🛠️ Tech Stack
 
 - ### HTML, Tailwind CSS, ReactJS + Vite
