@@ -9,7 +9,7 @@ export const Topbar = ({ hidden }) => {
   const topbarRef = useRef(null);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); 
     
     const bannerEl = document.querySelector("[data-page-banner]");
 
