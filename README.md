@@ -1,4 +1,10 @@
-on progress
+on progress - di service/sps-service ini yg blm diisi:
+audio.service.js
+lyric.service.js
+timestamp.service.js
+syllable.service.js
+sps.service.js
+chart.service.js
 
 # Rap Scannr
 
