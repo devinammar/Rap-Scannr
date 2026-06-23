@@ -28,7 +28,7 @@ https:/
 ## 🛠️ Tech Stack
 
 - ### HTML, Tailwind CSS, ReactJS + Vite
-- ### Node.js & Express.js
+- ### Node.js, Express.js & Docker
 - ### Sanity.io (CMS)
 - ### API:
 - ### Figma
