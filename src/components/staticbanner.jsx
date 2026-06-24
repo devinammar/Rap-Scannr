@@ -12,7 +12,7 @@ export const Staticbanner = ({ image, className }) => {
   );
 };
 
-// ________________________________________________________
+// __________________________________________________________
 
 // export const Staticbanner = ({ image }) => {
 //   return (
