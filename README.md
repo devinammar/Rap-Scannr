@@ -1,4 +1,4 @@
-on progress
+on progress - di service/sps-service ini yg blm diisi: audio.service.js, lyric.service.js, timestamp.service.js, syllable.service.js, sps.service.js, chart.service.js
 
 # Rap Scannr
 
@@ -22,13 +22,13 @@ https:/
 
 ## 📋 Software Development Life Cycle (SDLC)
 
-## 🏗️ Software Architecture
+## 🏗️ System Architecture Diagram
 ![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/cb4d6edaa730a9c35edfb3887276a60ce019631d/Software%20Architecture.jpg)
 
 ## 🛠️ Tech Stack
 
 - ### HTML, Tailwind CSS, ReactJS + Vite
-- ### Node.js & Express.js
+- ### Node.js, Express.js & Docker
 - ### Sanity.io (CMS)
 - ### API:
 - ### Figma
