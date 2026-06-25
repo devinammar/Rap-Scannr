@@ -3,6 +3,7 @@
 const audioService = require("../get-audio/audio.service");
 const lyricService = require("../get-lyric/lyric.service");
 const timestampService = require("../timestamp/timestamp.service");
+const spsService = require("../sps/sps.service");
 
 const analyze = async (data) => {
   const { url } = data;
@@ -31,24 +32,36 @@ const analyze = async (data) => {
   // 3. LYRIC PIPELINE
   const lyricResult = await lyricService.processLyric(audioResult);
 
-  // 4. TIMESTAMP PIPELINE (INI YANG LO TAMBAH)
+  // 4. TIMESTAMP PIPELINE
   const timestampResult =
     await timestampService.processTimestamp(lyricResult);
 
-  // 5. FINAL RESPONSE (SEMUA DICHAIN)
+  // 5. SPS PIPELINE (INI YANG BARU)
+  const spsResult =
+    await spsService.processSPS(timestampResult);
+
+  // 6. FINAL RESPONSE (FULL PIPELINE)
   return {
     success: true,
+
     source,
     url,
 
-    audioReady: timestampResult.audioReady,
-    audioPath: timestampResult.audioPath,
+    audioReady: spsResult.audioReady,
+    audioPath: spsResult.audioPath,
 
-    lyricReady: timestampResult.lyricReady,
-    lyric: timestampResult.lyric,
+    lyricReady: spsResult.lyricReady,
+    lyric: spsResult.lyric,
 
-    timestampReady: timestampResult.timestampReady,
-    timestamps: timestampResult.timestamps,
+    timestampReady: spsResult.timestampReady,
+    timestamps: spsResult.timestamps,
+
+    spsReady: spsResult.spsReady,
+    averageSPS: spsResult.averageSPS,
+    peakSPS: spsResult.peakSPS,
+    peakTime: spsResult.peakTime,
+    totalSyllables: spsResult.totalSyllables,
+    spsTimeline: spsResult.spsTimeline,
   };
 };
 
