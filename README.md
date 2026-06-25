@@ -1,4 +1,24 @@
-on progress - di service/sps-service ini yg blm diisi: audio.service.js, lyric.service.js, timestamp.service.js, syllable.service.js, sps.service.js, chart.service.js
+on progress - di service/sps-service ini yg blm diisi: audio.service.js, lyric.service.js, timestamp.service.js, syllable.service.js, sps.service.js, chart.service.js (23 juni 2026)
+
+sps-service dan gateway udh dites pake (POST) http://localhost:3000/api/analyze di postman, dan menuliskan body begini:
+```json
+{
+  "url": "https://youtube.com/watch?v=test"
+}
+```
+
+Hasil:
+```json
+{
+  "success": true,
+  "service": "sps-service",
+  "action": "analyze",
+  "receivedData": {
+    "url": "https://youtube.com/watch?v=test"
+  }
+}
+```
+(24 juni 2026)
 
 # Rap Scannr
 
