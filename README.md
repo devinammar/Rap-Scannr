@@ -39,7 +39,7 @@ Hasil:
   ]
 }
 ```
-(24 juni 2026)
+(25 juni 2026) - next step: chart service
 
 # Rap Scannr
 
