@@ -4,6 +4,7 @@ const audioService = require("../get-audio/audio.service");
 const lyricService = require("../get-lyric/lyric.service");
 const timestampService = require("../timestamp/timestamp.service");
 const spsService = require("../sps/sps.service");
+const chartService = require("../chart/chart.service");
 
 const analyze = async (data) => {
   const { url } = data;
@@ -12,7 +13,7 @@ const analyze = async (data) => {
     throw new Error("URL is required");
   }
 
-  // 1. detect source
+  // Detect source
   let source = "unknown";
 
   if (url.includes("youtube.com") || url.includes("youtu.be")) {
@@ -23,46 +24,29 @@ const analyze = async (data) => {
     source = "soundcloud";
   }
 
-  // 2. AUDIO PIPELINE
+  // Audio
   const audioResult = await audioService.processAudio({
     source,
     url,
   });
 
-  // 3. LYRIC PIPELINE
+  // Lyric
   const lyricResult = await lyricService.processLyric(audioResult);
 
-  // 4. TIMESTAMP PIPELINE
+  // Timestamp
   const timestampResult =
     await timestampService.processTimestamp(lyricResult);
 
-  // 5. SPS PIPELINE (INI YANG BARU)
+  // SPS
   const spsResult =
     await spsService.processSPS(timestampResult);
 
-  // 6. FINAL RESPONSE (FULL PIPELINE)
-  return {
-    success: true,
+  // Chart
+  const chartResult =
+    await chartService.generateChart(spsResult);
 
-    source,
-    url,
-
-    audioReady: spsResult.audioReady,
-    audioPath: spsResult.audioPath,
-
-    lyricReady: spsResult.lyricReady,
-    lyric: spsResult.lyric,
-
-    timestampReady: spsResult.timestampReady,
-    timestamps: spsResult.timestamps,
-
-    spsReady: spsResult.spsReady,
-    averageSPS: spsResult.averageSPS,
-    peakSPS: spsResult.peakSPS,
-    peakTime: spsResult.peakTime,
-    totalSyllables: spsResult.totalSyllables,
-    spsTimeline: spsResult.spsTimeline,
-  };
+  // Final result
+  return chartResult;
 };
 
 const compare = async (data) => {
@@ -70,8 +54,12 @@ const compare = async (data) => {
 
   return {
     success: true,
-    song1: { url: url1 },
-    song2: { url: url2 },
+    song1: {
+      url: url1,
+    },
+    song2: {
+      url: url2,
+    },
   };
 };
 
