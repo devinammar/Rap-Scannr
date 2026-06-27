@@ -3,41 +3,47 @@ const countSyllablesInWord = (word) => {
 
   if (!word) return 0;
 
-  // basic vowel groups detection
   const vowels = word.match(/[aeiouy]+/g);
+
   let count = vowels ? vowels.length : 0;
 
-  // silent "e" rule
-  if (word.endsWith("e")) count--;
+  // silent "e"
+  if (word.endsWith("e")) {
+    count--;
+  }
 
-  // minimum 1 syllable per word
-  if (count <= 0) count = 1;
+  // minimal 1 syllable
+  if (count <= 0) {
+    count = 1;
+  }
 
   return count;
 };
 
-const countSyllables = (text) => {
-  const words = text.split(" ");
+const processSyllable = async (timestampData) => {
+  const timestamps = timestampData.timestamps || [];
 
-  let total = 0;
+  let totalSyllables = 0;
 
-  for (const word of words) {
-    total += countSyllablesInWord(word);
-  }
+  const updatedTimestamps = timestamps.map((item) => {
+    const syllables = countSyllablesInWord(item.word);
 
-  return total;
-};
+    totalSyllables += syllables;
 
-// MAIN FUNCTION
-const processSyllable = async (lyricData) => {
-  const text = lyricData.lyric || lyricData.text || "";
-
-  const syllableCount = countSyllables(text);
+    return {
+      ...item,
+      syllables,
+    };
+  });
 
   return {
-    ...lyricData,
+    ...timestampData,
+
     syllableReady: true,
-    syllableCount,
+
+    totalSyllables,
+
+    timestamps: updatedTimestamps,
   };
 };
 

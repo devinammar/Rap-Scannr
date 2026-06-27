@@ -3,6 +3,7 @@
 const audioService = require("../get-audio/audio.service");
 const lyricService = require("../get-lyric/lyric.service");
 const timestampService = require("../timestamp/timestamp.service");
+const syllableService = require("../syllable/syllable.service");
 const spsService = require("../sps/sps.service");
 const chartService = require("../chart/chart.service");
 
@@ -37,28 +38,66 @@ const analyze = async (data) => {
   const timestampResult =
     await timestampService.processTimestamp(lyricResult);
 
+  // Syllable
+  const syllableResult =
+    await syllableService.processSyllable(timestampResult);
+
   // SPS
   const spsResult =
-    await spsService.processSPS(timestampResult);
+    await spsService.processSPS(syllableResult);
 
   // Chart
   const chartResult =
     await chartService.generateChart(spsResult);
 
-  // Final result
   return chartResult;
 };
 
 const compare = async (data) => {
   const { url1, url2 } = data;
 
+  if (!url1 || !url2) {
+    throw new Error("Both URLs are required");
+  }
+
+  // Jalankan pipeline analyze() untuk kedua lagu
+  const song1 = await analyze({
+    url: url1,
+  });
+
+  const song2 = await analyze({
+    url: url2,
+  });
+
+  const averageDifference = Number(
+    Math.abs(song1.averageSPS - song2.averageSPS).toFixed(2)
+  );
+
+  const peakDifference = Number(
+    Math.abs(song1.peakSPS - song2.peakSPS).toFixed(2)
+  );
+
   return {
     success: true,
-    song1: {
-      url: url1,
-    },
-    song2: {
-      url: url2,
+
+    song1,
+
+    song2,
+
+    comparison: {
+      averageWinner:
+        song1.averageSPS >= song2.averageSPS
+          ? "song1"
+          : "song2",
+
+      peakWinner:
+        song1.peakSPS >= song2.peakSPS
+          ? "song1"
+          : "song2",
+
+      averageDifference,
+
+      peakDifference,
     },
   };
 };
