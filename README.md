@@ -1,4 +1,4 @@
-on progress - udh install uuid, yt-dlp & ffmpeg utk mengubah dummy jadi pakai real data
+on progress - next step: create spsCalculator.js in utils/spsCalculator.js
 
 # Rap Scannr
 
