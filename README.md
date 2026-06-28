@@ -1,4 +1,4 @@
-on progress - next step: create spsCalculator.js in utils/spsCalculator.js, update sps.service.js & test test-sps.js
+on progress - next step: create spsCalculator.js in utils/spsCalculator.js, update sps.service.js & test test-sps.js + must fix the problem when run the 4000 port (Masalahnya: file syllableCounter nggak ketemu di path yang dicari. syllable.service.js nyari file di: backend/services/sps-service/utils/syllableCounter)
 
 # Rap Scannr
 
