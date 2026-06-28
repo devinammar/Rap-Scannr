@@ -1,4 +1,4 @@
-on progress - next step: create spsCalculator.js in utils/spsCalculator.js
+on progress - next step: create spsCalculator.js in utils/spsCalculator.js, update sps.service.js & test test-sps.js
 
 # Rap Scannr
 
