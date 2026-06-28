@@ -1,5 +1,6 @@
 const path = require("path");
 const { downloadYoutubeAudio } = require("../../utils/youtubeDownloader");
+const { processLyric } = require("../get-lyric/lyric.service");
 
 const processAudio = async ({ source, url }) => {
   if (!url) {
@@ -33,7 +34,7 @@ const processAudio = async ({ source, url }) => {
       throw new Error("Unsupported source");
   }
 
-  return {
+  const audioData = {
     success: true,
 
     source: platform,
@@ -48,6 +49,11 @@ const processAudio = async ({ source, url }) => {
 
     format: path.extname(audioPath).replace(".", ""),
   };
+
+  // lanjut ke Whisper
+  const lyricData = await processLyric(audioData);
+
+  return lyricData;
 };
 
 module.exports = {
