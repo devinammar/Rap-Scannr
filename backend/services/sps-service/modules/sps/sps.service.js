@@ -1,3 +1,9 @@
+const {
+  calculateAverageSPS,
+  calculatePeakSPS,
+  generateSPSTimeline,
+} = require("../../utils/spsCalculator");
+
 const processSPS = async (syllableData) => {
   const segments = syllableData.segments || [];
   const totalSyllables = syllableData.totalSyllables || 0;
@@ -6,50 +12,31 @@ const processSPS = async (syllableData) => {
     return {
       ...syllableData,
       spsReady: true,
+
       averageSPS: 0,
+
       peakSPS: 0,
       peakTime: 0,
+
       spsTimeline: [],
     };
   }
 
-  const startTime = segments[0].start;
-  const endTime = segments[segments.length - 1].end;
+  const averageSPS = calculateAverageSPS(
+    segments,
+    totalSyllables
+  );
 
-  const totalDuration = endTime - startTime;
+  const spsTimeline = generateSPSTimeline(
+    segments
+  );
 
-  const averageSPS =
-    totalDuration > 0
-      ? Number((totalSyllables / totalDuration).toFixed(2))
-      : 0;
-
-  const spsTimeline = segments.map((segment) => {
-    const duration = segment.end - segment.start;
-
-    const sps =
-      duration > 0
-        ? Number((segment.syllables / duration).toFixed(2))
-        : 0;
-
-    return {
-      start: segment.start,
-      end: segment.end,
-      duration: Number(duration.toFixed(2)),
-      syllables: segment.syllables,
-      sps,
-      text: segment.text,
-    };
-  });
-
-  let peakSPS = 0;
-  let peakTime = 0;
-
-  for (const point of spsTimeline) {
-    if (point.sps > peakSPS) {
-      peakSPS = point.sps;
-      peakTime = point.start;
-    }
-  }
+  const {
+    peakSPS,
+    peakTime,
+  } = calculatePeakSPS(
+    spsTimeline
+  );
 
   return {
     ...syllableData,
@@ -59,7 +46,6 @@ const processSPS = async (syllableData) => {
     averageSPS,
 
     peakSPS,
-
     peakTime,
 
     spsTimeline,

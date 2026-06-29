@@ -1,40 +1,31 @@
-const { runWhisper } = require("../../utils/whisperRunner");
-const { parseWhisperOutput } = require("../../utils/whisperParser");
+const fs = require("fs");
+const { parseWhisperJson } = require("../../utils/whisperJsonParser");
+const { runWhisper } = require("../../utils/whisperRunner"); // tambah ini
 
 const processLyric = async (audioData) => {
-  if (!audioData?.audioPath) {
-    throw new Error("audioPath is required for lyric processing");
-  }
-
   try {
-    // STEP 1 — run whisper
-    const whisperOutput = await runWhisper(audioData.audioPath);
+    await runWhisper(audioData.audioPath); // tambah ini
 
-    // STEP 2 — parse hasil whisper
-    const segments = parseWhisperOutput(whisperOutput);
-
-    // STEP 3 — extract full lyric text
-    const lyricText = segments
-      .map((s) => s.text)
-      .join(" ")
-      .trim();
-
+    const basePath = audioData.audioPath.replace(".wav", "");
+    const jsonPath = `${basePath}.json`;
+    console.log("Reading whisper file:", jsonPath);
+    if (!fs.existsSync(jsonPath)) {
+      throw new Error(`Whisper JSON not found: ${jsonPath}`);
+    }
+    const raw = fs.readFileSync(jsonPath, "utf-8");
+    const json = JSON.parse(raw);
+    const { segments, words } = parseWhisperJson(json);
+    const lyricText = segments.map(s => s.text).join(" ").trim();
     return {
       ...audioData,
-
-      // LYRIC RESULT REAL (NO MORE DUMMY)
       lyricReady: true,
       lyric: lyricText,
-
-      // segment timestamp detail
       segments,
-
-      // optional metadata
+      words,
       totalSegments: segments.length,
     };
   } catch (err) {
     console.error("Lyric processing failed:", err);
-
     return {
       ...audioData,
       lyricReady: false,
@@ -44,9 +35,7 @@ const processLyric = async (audioData) => {
   }
 };
 
-module.exports = {
-  processLyric,
-};
+module.exports = { processLyric };
 
 // ____________________________________________________________________
 

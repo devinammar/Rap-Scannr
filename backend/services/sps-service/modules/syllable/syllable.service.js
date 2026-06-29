@@ -1,4 +1,4 @@
-const { countSyllablesInWord } = require("../../../utils/syllableCounter");
+const { countSyllablesInWord } = require("../../utils/syllableCounter");
 
 const cleanWord = (word) => {
   if (!word) return "";
@@ -9,18 +9,47 @@ const cleanWord = (word) => {
     .trim();
 };
 
+// 🔥 extract words dari sentence
+const extractWordsFromSegments = (segments) => {
+  const words = [];
+
+  for (const segment of segments || []) {
+    const splitWords = segment.text.split(" ");
+
+    const duration = segment.end - segment.start;
+    const avgWordDuration = duration / (splitWords.length || 1);
+
+    splitWords.forEach((w, i) => {
+      const clean = cleanWord(w);
+
+      if (!clean) return;
+
+      words.push({
+        word: clean,
+        start: segment.start + i * avgWordDuration,
+        end: segment.start + (i + 1) * avgWordDuration,
+      });
+    });
+  }
+
+  return words;
+};
+
 const processSyllable = async (whisperData) => {
-  const words = whisperData.words || [];
+  const segments = whisperData.segments || [];
+
+  // 🔥 generate words dari segments (INI FIX UTAMA)
+  const wordsRaw = extractWordsFromSegments(segments);
 
   let totalSyllables = 0;
 
-  const processedWords = words
+  const processedWords = wordsRaw
     .map((item) => {
       const word = cleanWord(item.word);
 
       if (!word) return null;
 
-      // buang noise kayak (upbeat music)
+      // skip noise
       if (word.startsWith("(") && word.endsWith(")")) {
         return null;
       }
@@ -42,9 +71,7 @@ const processSyllable = async (whisperData) => {
     ...whisperData,
 
     syllableReady: true,
-
     totalSyllables,
-
     words: processedWords,
   };
 };
