@@ -12,9 +12,11 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "cmu-pronouncing-dictionary-cjs": "^3.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "syllable": "^5.0.1",
     "uuid": "^14.0.1"
   },
   "devDependencies": {
