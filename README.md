@@ -1,4 +1,4 @@
-on progress
+on progress - Fitur spotify analysis masih progress - hasilnya beda dengan yang diharapkan, beda yang di paste dengan yang di analisis dan yang keluar sebagai hasilnya (malah dapetnya musik Rick Roll)
 
 # Rap Scannr
 
