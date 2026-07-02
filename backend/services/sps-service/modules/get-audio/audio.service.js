@@ -1,45 +1,61 @@
 const path = require("path");
+
 const { downloadYoutubeAudio } = require("../../utils/youtubeDownloader");
-const { processLyric } = require("../get-lyric/lyric.service");
+const { getSpotifyMetadata } = require("../../utils/spotifyMetadata");
+const { searchYoutube } = require("../../utils/youtubeSearch");
 
 const processAudio = async ({ source, url }) => {
   if (!url) {
     throw new Error("URL is required");
   }
 
-  let platform = "unknown";
+  let platform = source;
 
-  if (url.includes("youtube.com") || url.includes("youtu.be")) {
-    platform = "youtube";
-  } else if (url.includes("spotify.com")) {
-    platform = "spotify";
-  } else if (url.includes("soundcloud.com")) {
-    platform = "soundcloud";
+  if (!platform) {
+    if (url.includes("youtube.com") || url.includes("youtu.be")) {
+      platform = "youtube";
+    } else if (url.includes("spotify.com")) {
+      platform = "spotify";
+    } else if (url.includes("soundcloud.com")) {
+      platform = "soundcloud";
+    } else {
+      platform = "unknown";
+    }
   }
 
-  let audioPath = null;
+  let youtubeUrl = url;
 
   switch (platform) {
     case "youtube":
-      audioPath = await downloadYoutubeAudio(url);
       break;
 
-    case "spotify":
-      throw new Error("Spotify downloader not implemented yet");
+    case "spotify": {
+      const metadata = await getSpotifyMetadata(url);
+
+      const keyword = `${metadata.artist} ${metadata.title}`;
+
+      youtubeUrl = await searchYoutube(keyword);
+
+      break;
+    }
 
     case "soundcloud":
-      throw new Error("SoundCloud downloader not implemented yet");
+      throw new Error("SoundCloud is not implemented yet");
 
     default:
       throw new Error("Unsupported source");
   }
 
-  const audioData = {
+  const audioPath = await downloadYoutubeAudio(youtubeUrl);
+
+  return {
     success: true,
 
     source: platform,
 
-    url,
+    originalUrl: url,
+
+    youtubeUrl,
 
     audioReady: true,
 
@@ -49,16 +65,143 @@ const processAudio = async ({ source, url }) => {
 
     format: path.extname(audioPath).replace(".", ""),
   };
-
-  // lanjut ke Whisper
-  const lyricData = await processLyric(audioData);
-
-  return lyricData;
 };
 
 module.exports = {
   processAudio,
 };
+
+// _______________________________________________________________________
+
+// yg lama
+
+// const path = require("path");
+// const { downloadYoutubeAudio } = require("../../utils/youtubeDownloader");
+// const { processLyric } = require("../get-lyric/lyric.service");
+
+// const processAudio = async ({ source, url }) => {
+//   if (!url) {
+//     throw new Error("URL is required");
+//   }
+
+//   let platform = "unknown";
+
+//   if (url.includes("youtube.com") || url.includes("youtu.be")) {
+//     platform = "youtube";
+//   } else if (url.includes("spotify.com")) {
+//     platform = "spotify";
+//   } else if (url.includes("soundcloud.com")) {
+//     platform = "soundcloud";
+//   }
+
+//   let audioPath = null;
+
+//   switch (platform) {
+//     case "youtube":
+//       audioPath = await downloadYoutubeAudio(url);
+//       break;
+
+//     case "spotify":
+//       throw new Error("Spotify downloader not implemented yet");
+
+//     case "soundcloud":
+//       throw new Error("SoundCloud downloader not implemented yet");
+
+//     default:
+//       throw new Error("Unsupported source");
+//   }
+
+//   const audioData = {
+//     success: true,
+
+//     source: platform,
+
+//     url,
+
+//     audioReady: true,
+
+//     audioPath,
+
+//     duration: 0,
+
+//     format: path.extname(audioPath).replace(".", ""),
+//   };
+
+//   // lanjut ke Whisper
+//   const lyricData = await processLyric(audioData);
+
+//   return lyricData;
+// };
+
+// module.exports = {
+//   processAudio,
+// };
+
+// _________________________________________________________________
+
+// ini ga kepake
+
+// const path = require("path");
+// const { downloadYoutubeAudio } = require("../../utils/youtubeDownloader");
+// const { processLyric } = require("../get-lyric/lyric.service");
+
+// const processAudio = async ({ source, url }) => {
+//   if (!url) {
+//     throw new Error("URL is required");
+//   }
+
+//   let platform = "unknown";
+
+//   if (url.includes("youtube.com") || url.includes("youtu.be")) {
+//     platform = "youtube";
+//   } else if (url.includes("spotify.com")) {
+//     platform = "spotify";
+//   } else if (url.includes("soundcloud.com")) {
+//     platform = "soundcloud";
+//   }
+
+//   let audioPath = null;
+
+//   switch (platform) {
+//     case "youtube":
+//       audioPath = await downloadYoutubeAudio(url);
+//       break;
+
+//     case "spotify":
+//       throw new Error("Spotify downloader not implemented yet");
+
+//     case "soundcloud":
+//       throw new Error("SoundCloud downloader not implemented yet");
+
+//     default:
+//       throw new Error("Unsupported source");
+//   }
+
+//   const audioData = {
+//     success: true,
+
+//     source: platform,
+
+//     url,
+
+//     audioReady: true,
+
+//     audioPath,
+
+//     duration: 0,
+
+//     format: path.extname(audioPath).replace(".", ""),
+//   };
+
+//   // lanjut ke Whisper
+//   const lyricData = await processLyric(audioData);
+
+//   return lyricData;
+// };
+
+// module.exports = {
+//   processAudio,
+// };
 
 // _____________________________________________________________________
 
