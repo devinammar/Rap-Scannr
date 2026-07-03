@@ -1,4 +1,4 @@
-on progress - Spotify analysis still in progress - baru bisa detect lagu Never gonna give you up (Rick Roll), belum bisa lagu lain. solusi: sepertinya harus ubah youtubeDownloader.js dan pakai RapidAPI YouTube MP3 Downloader (daripada pakai youtube API v3)
+on progress - Next step: cek claude dan chatgpt utk liat apa yg hrs dikerjakan (ada di sesi chatnya)
 
 # Rap Scannr
 
