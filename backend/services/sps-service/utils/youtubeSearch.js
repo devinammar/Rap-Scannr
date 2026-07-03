@@ -1,13 +1,30 @@
-const ytSearch = require("yt-search");
+const axios = require("axios");
 
 const searchYoutube = async (keyword) => {
-  const result = await ytSearch(keyword);
+  const apiKey = process.env.YOUTUBE_API_KEY;
 
-  if (!result.videos.length) {
+  const response = await axios.get(
+    "https://www.googleapis.com/youtube/v3/search",
+    {
+      params: {
+        part: "snippet",
+        q: keyword,
+        type: "video",
+        maxResults: 1,
+        key: apiKey,
+      },
+    }
+  );
+
+  const items = response.data.items;
+
+  if (!items || items.length === 0) {
     throw new Error("No matching YouTube video found");
   }
 
-  return result.videos[0].url;
+  const videoId = items[0].id.videoId;
+
+  return `https://www.youtube.com/watch?v=${videoId}`;
 };
 
 module.exports = {

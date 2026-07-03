@@ -25,46 +25,55 @@ const processAudio = async ({ source, url }) => {
 
   let youtubeUrl = url;
 
-  switch (platform) {
-    case "youtube":
-      break;
+  try {
+    switch (platform) {
+      case "youtube":
+        break;
 
-    case "spotify": {
-      const metadata = await getSpotifyMetadata(url);
+      case "spotify": {
+        const metadata = await getSpotifyMetadata(url);
 
-      const keyword = `${metadata.artist} ${metadata.title}`;
+        console.log("SPOTIFY METADATA:", metadata);
 
-      youtubeUrl = await searchYoutube(keyword);
+        const keyword = `${metadata.artist || ""} ${metadata.title || ""}`.trim();
 
-      break;
+        console.log("YOUTUBE SEARCH KEYWORD:", keyword);
+
+        if (!keyword) {
+          throw new Error("Empty keyword from Spotify metadata");
+        }
+
+        youtubeUrl = await searchYoutube(keyword);
+
+        console.log("YOUTUBE RESULT:", youtubeUrl);
+
+        break;
+      }
+
+      case "soundcloud":
+        throw new Error("SoundCloud is not implemented yet");
+
+      default:
+        throw new Error("Unsupported source");
     }
 
-    case "soundcloud":
-      throw new Error("SoundCloud is not implemented yet");
+    const audioPath = await downloadYoutubeAudio(youtubeUrl);
 
-    default:
-      throw new Error("Unsupported source");
+    return {
+      success: true,
+      source: platform,
+      originalUrl: url,
+      youtubeUrl,
+      audioReady: true,
+      audioPath,
+      duration: 0,
+      format: path.extname(audioPath).replace(".", ""),
+    };
+
+  } catch (err) {
+    console.error("AUDIO SERVICE ERROR:", err);
+    throw err;
   }
-
-  const audioPath = await downloadYoutubeAudio(youtubeUrl);
-
-  return {
-    success: true,
-
-    source: platform,
-
-    originalUrl: url,
-
-    youtubeUrl,
-
-    audioReady: true,
-
-    audioPath,
-
-    duration: 0,
-
-    format: path.extname(audioPath).replace(".", ""),
-  };
 };
 
 module.exports = {
