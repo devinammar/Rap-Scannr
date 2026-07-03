@@ -7,7 +7,8 @@ router.post("/analyze", async (req, res) => {
   try {
     const response = await axios.post(
       `${process.env.SPS_SERVICE_URL}/analyze`,
-      req.body
+      req.body,
+      { timeout: 300000 } // 5 menit
     );
 
     res.json(response.data);
@@ -22,7 +23,8 @@ router.post("/compare", async (req, res) => {
   try {
     const response = await axios.post(
       `${process.env.SPS_SERVICE_URL}/compare`,
-      req.body
+      req.body,
+      { timeout: 300000 } // 5 menit
     );
 
     res.json(response.data);

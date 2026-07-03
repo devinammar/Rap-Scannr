@@ -14,41 +14,28 @@ const analyze = async (data) => {
     throw new Error("URL is required");
   }
 
-  // Detect source
   let source = "unknown";
+  if (url.includes("youtube.com") || url.includes("youtu.be")) source = "youtube";
+  else if (url.includes("spotify.com")) source = "spotify";
+  else if (url.includes("soundcloud.com")) source = "soundcloud";
 
-  if (url.includes("youtube.com") || url.includes("youtu.be")) {
-    source = "youtube";
-  } else if (url.includes("spotify.com")) {
-    source = "spotify";
-  } else if (url.includes("soundcloud.com")) {
-    source = "soundcloud";
-  }
+  const audioResult = await audioService.processAudio({ source, url });
+  console.log("Audio done");
 
-  // Audio
-  const audioResult = await audioService.processAudio({
-    source,
-    url,
-  });
-
-  // Lyric
   const lyricResult = await lyricService.processLyric(audioResult);
+  console.log("Lyric done");
 
-  // Timestamp
-  const timestampResult =
-    await timestampService.processTimestamp(lyricResult);
+  const timestampResult = await timestampService.processTimestamp(lyricResult);
+  console.log("Timestamp done");
 
-  // Syllable
-  const syllableResult =
-    await syllableService.processSyllable(timestampResult);
+  const syllableResult = await syllableService.processSyllable(timestampResult);
+  console.log("yllable done");
 
-  // SPS
-  const spsResult =
-    await spsService.processSPS(syllableResult);
+  const spsResult = await spsService.processSPS(syllableResult);
+  console.log("SPS done");
 
-  // Chart
-  const chartResult =
-    await chartService.generateChart(spsResult);
+  const chartResult = await chartService.generateChart(spsResult);
+  console.log("Chart done");
 
   return chartResult;
 };
@@ -60,14 +47,8 @@ const compare = async (data) => {
     throw new Error("Both URLs are required");
   }
 
-  // Jalankan pipeline analyze() untuk kedua lagu
-  const song1 = await analyze({
-    url: url1,
-  });
-
-  const song2 = await analyze({
-    url: url2,
-  });
+  const song1 = await analyze({ url: url1 });
+  const song2 = await analyze({ url: url2 });
 
   const averageDifference = Number(
     Math.abs(song1.averageSPS - song2.averageSPS).toFixed(2)
@@ -79,24 +60,12 @@ const compare = async (data) => {
 
   return {
     success: true,
-
     song1,
-
     song2,
-
     comparison: {
-      averageWinner:
-        song1.averageSPS >= song2.averageSPS
-          ? "song1"
-          : "song2",
-
-      peakWinner:
-        song1.peakSPS >= song2.peakSPS
-          ? "song1"
-          : "song2",
-
+      averageWinner: song1.averageSPS >= song2.averageSPS ? "song1" : "song2",
+      peakWinner: song1.peakSPS >= song2.peakSPS ? "song1" : "song2",
       averageDifference,
-
       peakDifference,
     },
   };

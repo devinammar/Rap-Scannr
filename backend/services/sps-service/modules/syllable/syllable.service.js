@@ -9,7 +9,7 @@ const cleanWord = (word) => {
     .trim();
 };
 
-// 🔥 extract words dari sentence
+// extract words dari sentence
 const extractWordsFromSegments = (segments) => {
   const words = [];
 
@@ -38,7 +38,7 @@ const extractWordsFromSegments = (segments) => {
 const processSyllable = async (whisperData) => {
   const segments = whisperData.segments || [];
 
-  // 🔥 generate words dari segments (INI FIX UTAMA)
+  // generate words dari segments
   const wordsRaw = extractWordsFromSegments(segments);
 
   let totalSyllables = 0;

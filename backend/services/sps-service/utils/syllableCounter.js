@@ -21,4 +21,4 @@ const countSyllablesInWord = (word) => {
 
 module.exports = {
   countSyllablesInWord,
-};
+}; 
