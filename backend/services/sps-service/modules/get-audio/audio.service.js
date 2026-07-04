@@ -2,59 +2,46 @@ const path = require("path");
 
 const { downloadYoutubeAudio } = require("../../utils/youtubeDownloader");
 const { getSpotifyMetadata } = require("../../utils/spotifyMetadata");
-const { searchYoutube } = require("../../utils/youtubeSearch");
+const { searchYoutube, getYoutubeMetadata } = require("../../utils/youtubeSearch");
 
 const processAudio = async ({ source, url }) => {
-  if (!url) {
-    throw new Error("URL is required");
-  }
+  if (!url) throw new Error("URL is required");
 
   let platform = source;
 
   if (!platform) {
-    if (url.includes("youtube.com") || url.includes("youtu.be")) {
-      platform = "youtube";
-    } else if (url.includes("spotify.com")) {
-      platform = "spotify";
-    } else if (url.includes("soundcloud.com")) {
-      platform = "soundcloud";
-    } else {
-      platform = "unknown";
-    }
+    if (url.includes("youtube.com") || url.includes("youtu.be")) platform = "youtube";
+    else if (url.includes("spotify.com")) platform = "spotify";
+    else if (url.includes("soundcloud.com")) platform = "soundcloud";
+    else platform = "unknown";
   }
 
   let youtubeUrl = url;
+  let title = null;
+  let artist = null;
 
   try {
-    switch (platform) {
-      case "youtube":
-        break;
+    if (platform === "spotify") {
+      const metadata = await getSpotifyMetadata(url);
+      console.log("SPOTIFY METADATA:", metadata);
 
-      case "spotify": {
-        const metadata = await getSpotifyMetadata(url);
+      artist = metadata.artist || "";
+      title = metadata.title || "";
 
-        console.log("SPOTIFY METADATA:", metadata);
+      const keyword = `${artist} ${title}`.trim();
+      console.log("YOUTUBE SEARCH KEYWORD:", keyword);
 
-        const keyword = `${metadata.artist || ""} ${metadata.title || ""}`.trim();
+      if (!keyword || keyword.length < 2) throw new Error("Invalid Spotify metadata keyword");
 
-        console.log("YOUTUBE SEARCH KEYWORD:", keyword);
+      youtubeUrl = await searchYoutube(keyword);
+      console.log("YOUTUBE RESULT:", youtubeUrl);
+    }
 
-        if (!keyword) {
-          throw new Error("Empty keyword from Spotify metadata");
-        }
-
-        youtubeUrl = await searchYoutube(keyword);
-
-        console.log("YOUTUBE RESULT:", youtubeUrl);
-
-        break;
-      }
-
-      case "soundcloud":
-        throw new Error("SoundCloud is not implemented yet");
-
-      default:
-        throw new Error("Unsupported source");
+    if (platform === "youtube") {
+      youtubeUrl = url;
+      const metadata = await getYoutubeMetadata(url);
+      title = metadata.title;
+      artist = metadata.artist;
     }
 
     const audioPath = await downloadYoutubeAudio(youtubeUrl);
@@ -64,6 +51,8 @@ const processAudio = async ({ source, url }) => {
       source: platform,
       originalUrl: url,
       youtubeUrl,
+      title,
+      artist,
       audioReady: true,
       audioPath,
       duration: 0,
@@ -71,7 +60,7 @@ const processAudio = async ({ source, url }) => {
     };
 
   } catch (err) {
-    console.error("AUDIO SERVICE ERROR:", err);
+    console.error("AUDIO SERVICE ERROR:", err.message);
     throw err;
   }
 };

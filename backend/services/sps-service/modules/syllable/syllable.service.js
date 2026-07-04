@@ -5,11 +5,10 @@ const cleanWord = (word) => {
 
   return word
     .toLowerCase()
-    .replace(/[^a-z']/g, "") // keep apostrophe
+    .replace(/[^a-z']/g, "")
     .trim();
 };
 
-// extract words dari sentence
 const extractWordsFromSegments = (segments) => {
   const words = [];
 
@@ -38,7 +37,6 @@ const extractWordsFromSegments = (segments) => {
 const processSyllable = async (whisperData) => {
   const segments = whisperData.segments || [];
 
-  // generate words dari segments
   const wordsRaw = extractWordsFromSegments(segments);
 
   let totalSyllables = 0;
@@ -46,13 +44,9 @@ const processSyllable = async (whisperData) => {
   const processedWords = wordsRaw
     .map((item) => {
       const word = cleanWord(item.word);
-
       if (!word) return null;
 
-      // skip noise
-      if (word.startsWith("(") && word.endsWith(")")) {
-        return null;
-      }
+      if (word.startsWith("(") && word.endsWith(")")) return null;
 
       const syllables = countSyllablesInWord(word);
 
@@ -71,7 +65,11 @@ const processSyllable = async (whisperData) => {
     ...whisperData,
 
     syllableReady: true,
+
     totalSyllables,
+
+    totalWords: processedWords.length, // 🔥 FIX IMPORTANT
+
     words: processedWords,
   };
 };
