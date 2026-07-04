@@ -1,9 +1,9 @@
-on progress - Next step: problem 2. Lagu kedua (Eminem dari YouTube link) hasilnya "upbeat music" semua — itu karena whisper.cpp model base.en kesulitan transkrip instrumental/musik yang dominan. Tapi ini bukan bug kode, ini limitasi model Whisper. <br>
-kata claude:
-Oh iya itu masuk akal — timeout bukan cuma soal durasi lagu, tapi juga kompleksitas audio-nya.
+on progress - Next step: problem 2 - Lagu kedua (Eminem dari YouTube link) hasilnya "upbeat music" semua — itu karena whisper.cpp model base.en kesulitan transkrip instrumental/musik yang dominan. Tapi ini bukan bug kode, ini limitasi model Whisper. <br>
+kata claude: <br>
+"Oh iya itu masuk akal — timeout bukan cuma soal durasi lagu, tapi juga kompleksitas audio-nya.
 "Where'd You Go" (Fort Minor) — musiknya lebih simple dan vocal jelas → Whisper cepet prosesnya.
 "Godzilla" (Eminem) — beat sangat dense, rap speed sangat cepet, banyak layer audio → Whisper kerja lebih keras → prosesnya lebih lama → timeout.
-Jadi bukan melulu soal durasi, tapi seberapa "berat" audio-nya buat Whisper proses.
+Jadi bukan melulu soal durasi, tapi seberapa "berat" audio-nya buat Whisper proses."
 
 # Rap Scannr
 
