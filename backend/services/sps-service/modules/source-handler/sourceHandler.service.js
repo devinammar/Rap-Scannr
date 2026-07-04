@@ -1,5 +1,6 @@
-// ngambil data real
+// ini yg terbaru
 
+const { getProvider } = require("./providerFactory");
 const audioService = require("../get-audio/audio.service");
 const lyricService = require("../get-lyric/lyric.service");
 const timestampService = require("../timestamp/timestamp.service");
@@ -12,46 +13,42 @@ const analyze = async (data) => {
 
   if (!url) throw new Error("URL is required");
 
-  let source = "unknown";
-  if (url.includes("youtube.com") || url.includes("youtu.be")) source = "youtube";
-  else if (url.includes("spotify.com")) source = "spotify";
-  else if (url.includes("soundcloud.com")) source = "soundcloud";
+  // 1. Provider resolve (ONLY youtubeUrl + metadata)
+  const provider = getProvider(url);
+  const providerResult = await provider.process(url);
 
-  // Pipeline
-  const audio = await audioService.processAudio({ source, url });
+  // 2. Audio download (ONLY youtube URL)
+  const audioResult = await audioService.processAudio({
+    youtubeUrl: providerResult.youtubeUrl,
+  });
 
-  const lyric = await lyricService.processLyric(audio);
-
+  // merge pipeline
+  const lyric = await lyricService.processLyric(audioResult);
   const timestamp = await timestampService.processTimestamp(lyric);
-
   const syllable = await syllableService.processSyllable(timestamp);
-
   const sps = await spsService.processSPS(syllable);
-
   const chart = await chartService.generateChart(sps);
 
-  // Clean output
   return {
     success: true,
 
     meta: {
-      source,
+      source: providerResult.source,
       originalUrl: url,
-      youtubeUrl: audio.youtubeUrl,
-      title: audio.title || null,
-      artist: audio.artist || null,
+      youtubeUrl: providerResult.youtubeUrl,
+      title: providerResult.title,
+      artist: providerResult.artist,
     },
 
     stats: {
       averageSPS: sps.averageSPS,
       peakSPS: sps.peakSPS,
       peakTime: sps.peakTime,
-      totalWords: syllable.totalWords,
+      totalWords: syllable.words.length,
       totalSyllables: syllable.totalSyllables,
     },
 
     chart: chart.chartData,
-
     timeline: sps.spsTimeline,
   };
 };
@@ -59,17 +56,13 @@ const analyze = async (data) => {
 const compare = async (data) => {
   const { url1, url2 } = data;
 
-  if (!url1 || !url2) throw new Error("Both URLs are required");
-
   const song1 = await analyze({ url: url1 });
   const song2 = await analyze({ url: url2 });
 
   return {
     success: true,
-
     song1,
     song2,
-
     comparison: {
       averageWinner:
         song1.stats.averageSPS >= song2.stats.averageSPS ? "song1" : "song2",
@@ -92,6 +85,103 @@ module.exports = {
   analyze,
   compare,
 };
+
+// ______________________________________________________________
+
+// ngambil data real
+
+// const audioService = require("../get-audio/audio.service");
+// const lyricService = require("../get-lyric/lyric.service");
+// const timestampService = require("../timestamp/timestamp.service");
+// const syllableService = require("../syllable/syllable.service");
+// const spsService = require("../sps/sps.service");
+// const chartService = require("../chart/chart.service");
+
+// const analyze = async (data) => {
+//   const { url } = data;
+
+//   if (!url) throw new Error("URL is required");
+
+//   let source = "unknown";
+//   if (url.includes("youtube.com") || url.includes("youtu.be")) source = "youtube";
+//   else if (url.includes("spotify.com")) source = "spotify";
+//   else if (url.includes("soundcloud.com")) source = "soundcloud";
+
+//   // Pipeline
+//   const audio = await audioService.processAudio({ source, url });
+
+//   const lyric = await lyricService.processLyric(audio);
+
+//   const timestamp = await timestampService.processTimestamp(lyric);
+
+//   const syllable = await syllableService.processSyllable(timestamp);
+
+//   const sps = await spsService.processSPS(syllable);
+
+//   const chart = await chartService.generateChart(sps);
+
+//   // Clean output
+//   return {
+//     success: true,
+
+//     meta: {
+//       source,
+//       originalUrl: url,
+//       youtubeUrl: audio.youtubeUrl,
+//       title: audio.title || null,
+//       artist: audio.artist || null,
+//     },
+
+//     stats: {
+//       averageSPS: sps.averageSPS,
+//       peakSPS: sps.peakSPS,
+//       peakTime: sps.peakTime,
+//       totalWords: syllable.totalWords,
+//       totalSyllables: syllable.totalSyllables,
+//     },
+
+//     chart: chart.chartData,
+
+//     timeline: sps.spsTimeline,
+//   };
+// };
+
+// const compare = async (data) => {
+//   const { url1, url2 } = data;
+
+//   if (!url1 || !url2) throw new Error("Both URLs are required");
+
+//   const song1 = await analyze({ url: url1 });
+//   const song2 = await analyze({ url: url2 });
+
+//   return {
+//     success: true,
+
+//     song1,
+//     song2,
+
+//     comparison: {
+//       averageWinner:
+//         song1.stats.averageSPS >= song2.stats.averageSPS ? "song1" : "song2",
+
+//       peakWinner:
+//         song1.stats.peakSPS >= song2.stats.peakSPS ? "song1" : "song2",
+
+//       averageDifference: Math.abs(
+//         song1.stats.averageSPS - song2.stats.averageSPS
+//       ).toFixed(2),
+
+//       peakDifference: Math.abs(
+//         song1.stats.peakSPS - song2.stats.peakSPS
+//       ).toFixed(2),
+//     },
+//   };
+// };
+
+// module.exports = {
+//   analyze,
+//   compare,
+// };
 
 // ___________________________________________________________
 
