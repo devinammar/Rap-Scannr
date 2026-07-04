@@ -1,16 +1,16 @@
-const { getSoundcloudMetadata } = require("../../utils/soundcloudMetadata");
+const { getDeezerMetadata } = require("../../utils/deezerMetadata");
 const { searchYoutube } = require("../../utils/youtubeSearch");
 const { downloadYoutubeAudio } = require("../../utils/youtubeDownloader");
 const path = require("path");
 
 const process = async (url) => {
-  const metadata = await getSoundcloudMetadata(url);
-  console.log("SOUNDCLOUD METADATA:", metadata);
+  const metadata = await getDeezerMetadata(url);
+  console.log("DEEZER METADATA:", metadata);
 
   const keyword = `${metadata.artist || ""} ${metadata.title || ""}`.trim();
   console.log("YOUTUBE SEARCH KEYWORD:", keyword);
 
-  if (!keyword || keyword.length < 2) throw new Error("Invalid SoundCloud metadata keyword");
+  if (!keyword || keyword.length < 2) throw new Error("Invalid Deezer metadata keyword");
 
   const youtubeUrl = await searchYoutube(keyword);
   console.log("YOUTUBE RESULT:", youtubeUrl);
@@ -19,7 +19,7 @@ const process = async (url) => {
 
   return {
     success: true,
-    source: "soundcloud",
+    source: "deezer",
     originalUrl: url,
     youtubeUrl,
     title: metadata.title,
