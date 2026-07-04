@@ -33,21 +33,27 @@ const getYoutubeMetadata = async (url) => {
   const response = await axios.get(
     "https://www.googleapis.com/youtube/v3/videos",
     {
-      params: {
-        part: "snippet",
-        id: videoId,
-        key: apiKey,
-      },
+      params: { part: "snippet", id: videoId, key: apiKey },
     }
   );
 
   const item = response.data.items?.[0];
   if (!item) return { title: null, artist: null };
 
-  return {
-    title: item.snippet.title,
-    artist: item.snippet.channelTitle,
-  };
+  const rawTitle = item.snippet.title;
+
+  // Parse "Artist - Title" pattern
+  const dashIndex = rawTitle.indexOf(" - ");
+  let artist = null;
+  let title = rawTitle;
+
+  if (dashIndex !== -1) {
+    artist = rawTitle.substring(0, dashIndex).trim();
+    title = rawTitle.substring(dashIndex + 3).trim();
+    title = title.replace(/\s*\(.*?(official|video|audio|lyrics|mv).*?\)/gi, "").trim();
+  }
+
+  return { title, artist };
 };
 
 module.exports = {
