@@ -1,3 +1,7 @@
+// setelah improvement:
+// Setiap 1 detik, hitung syllable dalam window 3 detik ke depan. 
+// Jadi setiap titik waktu punya nilai SPS yang lebih granular dan peak yang sesungguhnya bisa ketangkep
+
 const {
   calculateAverageSPS,
   calculatePeakSPS,
@@ -6,48 +10,36 @@ const {
 
 const processSPS = async (syllableData) => {
   const segments = syllableData.segments || [];
+  const words = syllableData.words || [];
   const totalSyllables = syllableData.totalSyllables || 0;
 
   if (segments.length === 0 || totalSyllables === 0) {
     return {
       ...syllableData,
       spsReady: true,
-
       averageSPS: 0,
-
       peakSPS: 0,
       peakTime: 0,
-
       spsTimeline: [],
     };
   }
 
-  const averageSPS = calculateAverageSPS(
-    segments,
-    totalSyllables
-  );
+  // averageSPS tetap pake segments (untuk durasi keseluruhan)
+  const averageSPS = calculateAverageSPS(segments, totalSyllables);
 
-  const spsTimeline = generateSPSTimeline(
-    segments
-  );
+  // spsTimeline pake words dengan rolling window 3 detik
+  // Sebelum: dihitung per-segment Whisper (~5-10 detik), peak bisa hilang ke-average
+  // Setelah: rolling window per 1 detik step, 3 detik window — peak lebih akurat
+  const spsTimeline = generateSPSTimeline(words);
 
-  const {
-    peakSPS,
-    peakTime,
-  } = calculatePeakSPS(
-    spsTimeline
-  );
+  const { peakSPS, peakTime } = calculatePeakSPS(spsTimeline);
 
   return {
     ...syllableData,
-
     spsReady: true,
-
     averageSPS,
-
     peakSPS,
     peakTime,
-
     spsTimeline,
   };
 };
@@ -55,6 +47,71 @@ const processSPS = async (syllableData) => {
 module.exports = {
   processSPS,
 };
+
+// _____________________________________________________________
+
+// sebelum improvement:
+// Whisper bagi audio jadi segment ~5-10 detik. SPS dihitung per segment, 
+// Kalau dalam 1 segment ada bagian cepet dan lambat, semua di-average jadi 1 angka. 
+// Peak yang terjadi dalam 3 detik bisa hilang karena ke-dilute sama 7 detik yang lambat di segment yang sama.
+
+// const {
+//   calculateAverageSPS,
+//   calculatePeakSPS,
+//   generateSPSTimeline,
+// } = require("../../utils/spsCalculator");
+
+// const processSPS = async (syllableData) => {
+//   const segments = syllableData.segments || [];
+//   const totalSyllables = syllableData.totalSyllables || 0;
+
+//   if (segments.length === 0 || totalSyllables === 0) {
+//     return {
+//       ...syllableData,
+//       spsReady: true,
+
+//       averageSPS: 0,
+
+//       peakSPS: 0,
+//       peakTime: 0,
+
+//       spsTimeline: [],
+//     };
+//   }
+
+//   const averageSPS = calculateAverageSPS(
+//     segments,
+//     totalSyllables
+//   );
+
+//   const spsTimeline = generateSPSTimeline(
+//     segments
+//   );
+
+//   const {
+//     peakSPS,
+//     peakTime,
+//   } = calculatePeakSPS(
+//     spsTimeline
+//   );
+
+//   return {
+//     ...syllableData,
+
+//     spsReady: true,
+
+//     averageSPS,
+
+//     peakSPS,
+//     peakTime,
+
+//     spsTimeline,
+//   };
+// };
+
+// module.exports = {
+//   processSPS,
+// };
 
 // ____________________________________________________________
 
