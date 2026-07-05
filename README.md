@@ -16,9 +16,7 @@ https:/
 
 ## ✨ Features
 
-## 🧩 Problem
-
-## 💡 Solution
+## 🎯 Goals & Objectives
 
 ## 📋 Software Development Life Cycle (SDLC)
 
