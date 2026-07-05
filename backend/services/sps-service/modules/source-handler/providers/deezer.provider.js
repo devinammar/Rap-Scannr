@@ -1,6 +1,6 @@
-const { getDeezerMetadata } = require("../../utils/deezerMetadata");
-const { searchYoutube } = require("../../utils/youtubeSearch");
-const { downloadYoutubeAudio } = require("../../utils/youtubeDownloader");
+const { getDeezerMetadata } = require("../../../utils/deezerMetadata");
+const { searchYoutube } = require("../../../utils/youtubeSearch");
+const { downloadYoutubeAudio } = require("../../../utils/youtubeDownloader");
 const path = require("path");
 
 const process = async (url) => {

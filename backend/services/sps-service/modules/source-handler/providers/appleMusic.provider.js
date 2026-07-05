@@ -1,6 +1,6 @@
-const { getAppleMusicMetadata } = require("../../utils/appleMusicMetadata");
-const { searchYoutube } = require("../../utils/youtubeSearch");
-const { downloadYoutubeAudio } = require("../../utils/youtubeDownloader");
+const { getAppleMusicMetadata } = require("../../../utils/appleMusicMetadata");
+const { searchYoutube } = require("../../../utils/youtubeSearch");
+const { downloadYoutubeAudio } = require("../../../utils/youtubeDownloader");
 const path = require("path");
 
 const process = async (url) => {
