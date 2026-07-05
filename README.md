@@ -1,4 +1,4 @@
-on progress - Next step: kerjain frontend (integrasi dari frontend > backend (prosesnya) > frontend (nampilin hasil)
+on progress - Next step: kerjain frontend (integrasi dari frontend > backend (prosesnya) > frontend (nampilin hasil))
 
 # Rap Scannr
 
