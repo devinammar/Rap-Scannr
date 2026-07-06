@@ -1,4 +1,4 @@
-on progress - The code with correct styling (for area1.jsx (trackanalysis) and area1.jsx (rapbattle)) is located below the new code (the previous code) within area1.jsx (trackanalysis) and area1.jsx (rapbattle))
+on progress - styling di area1.jsx (trackanalysis) & area1.jsx (rapbattle) udah bener, tinggal tes lewat frontend (tes dengan paste link ke searchbar)
 
 # Rap Scannr
 
