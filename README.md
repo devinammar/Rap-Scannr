@@ -1,4 +1,4 @@
-on progress - Next step: kerjain frontend (integrasi dari frontend > backend (prosesnya) > frontend (nampilin hasil))
+on progress - The code with correct styling (for area1.jsx (trackanalysis) and area1.jsx (rapbattle)) is located below the new code (the previous code) within area1.jsx (trackanalysis) and area1.jsx (rapbattle))
 
 # Rap Scannr
 
