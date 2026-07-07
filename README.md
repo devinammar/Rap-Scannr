@@ -1,4 +1,4 @@
-on progress - styling di area1.jsx (trackanalysis) & area1.jsx (rapbattle) udah bener, tinggal tes lewat frontend (tes dengan paste link ke searchbar)
+on progress
 
 # Rap Scannr
 
