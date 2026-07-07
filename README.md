@@ -32,8 +32,9 @@ https:/
   [Groq.com](https://groq.com/)
 - ### Figma
   [Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1)
-  
 - ### Adobe Photoshop
+
+## ⚙️ Implementation Details
 
 All stock photos used for this project are from Pexels and Unsplash
 
