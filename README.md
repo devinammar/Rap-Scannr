@@ -1,4 +1,4 @@
-on progress
+on progress - musik dari soundcloud tadi di test malah gabisa (yang dari youtube, spotify, applemusic bisa, cuma yang dari soundcloud yang gabisa), sama harus ganti warna rechart jadi hijau (hitam-hijau; saat ini masih warna hitam-oren)
 
 # Rap Scannr
 
