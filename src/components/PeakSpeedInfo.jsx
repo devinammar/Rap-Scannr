@@ -8,7 +8,7 @@ export const PeakSpeedInfo = ({ peakSPS, peakTime }) => {
   if (!peakSPS) return null;
 
   return (
-    <div className="bg-[#f0f0f0] p-6">
+    <div className="bg-grey/20 p-6">
       <p className="text-p text-black">
         Peak Speed: {peakSPS} SPS at {formatTime(peakTime)}
       </p>
