@@ -29,7 +29,7 @@ export const OverallComparison = ({ song1, song2 }) => {
   const title2 = song2.meta.title || "Song 2";
 
   return (
-    <div className="w-full bg-grey/20 p-6">
+    <div className="w-full bg-grey/20 px-10 py-7">
       <p className="text-h3 font-medium text-black text-center mb-6">Overall Comparison</p>
       <div className="w-full h-[300px]">
         <ResponsiveContainer width="100%" height="100%">

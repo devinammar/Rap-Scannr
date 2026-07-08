@@ -1,8 +1,8 @@
 export const TitleAndArtist = ({ title, artist }) => {
   return (
-    <div className="p-6 bg-grey/20">
-      <p className="text-h3 font-medium text-black">{title || "Unknown Title"}</p>
-      <p className="text-p text-black mt-1">{artist || "Unknown Artist"}</p>
+    <div className="px-10 py-7 bg-black">
+      <p className="text-h3 font-medium text-white">{title || "Unknown Title"}</p>
+      <p className="text-p text-white mt-1">{artist || "Unknown Artist"}</p>
     </div>
   );
 };

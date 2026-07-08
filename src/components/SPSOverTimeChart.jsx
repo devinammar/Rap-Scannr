@@ -12,9 +12,9 @@ export const SPSOverTimeChart = ({ data }) => {
   if (!data || data.length === 0) return null;
 
   return (
-    <div className="w-full h-[400px] bg-grey/20 p-6">
+    <div className="w-full h-[400px] bg-grey/20 px-10 py-7">
       <p className="text-h3 font-medium text-black text-center mb-6">SPS Overtime</p>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="80%">
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
           <XAxis

@@ -9,7 +9,7 @@ export const StatisticTable = ({ stats }) => {
   ];
 
   return (
-    <div className="bg-[#f0f0f0] p-6">
+    <div className="bg-grey/20 px-10 py-7">
       <p className="text-h3 font-medium text-black text-center mb-6">Statistic</p>
       <table className="w-full">
         <thead>
