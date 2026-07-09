@@ -30,17 +30,27 @@ export const OverallComparison = ({ song1, song2 }) => {
 
   return (
     <div className="w-full bg-grey/20 px-10 py-7">
-      <p className="text-h3 font-medium text-black text-center mb-6">Overall Comparison</p>
+      <p className="text-h3 font-medium text-black text-center mb-6">
+        Overall Comparison
+      </p>
       <div className="w-full h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
             <XAxis dataKey="metric" />
             <YAxis />
-            <Tooltip />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "#1D1D1D",
+                border: "none",
+                borderRadius: "0px",
+                color: "#FBFBFB",
+              }}
+              itemStyle={{ color: "#FBFBFB" }}
+            />
             <Legend />
             <Bar dataKey={title1} fill="#1D1D1D" />
-            <Bar dataKey={title2} fill="#f97316" />
+            <Bar dataKey={title2} fill="#436092" />
           </BarChart>
         </ResponsiveContainer>
       </div>

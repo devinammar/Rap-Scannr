@@ -13,7 +13,9 @@ export const SPSOverTimeChart = ({ data }) => {
 
   return (
     <div className="w-full h-[400px] bg-grey/20 px-10 py-7">
-      <p className="text-h3 font-medium text-black text-center mb-6">SPS Overtime</p>
+      <p className="text-h3 font-medium text-black text-center mb-6">
+        SPS Overtime
+      </p>
       <ResponsiveContainer width="100%" height="80%">
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
@@ -27,13 +29,20 @@ export const SPSOverTimeChart = ({ data }) => {
             tick={{ fontSize: 12 }}
           />
           <Tooltip
+            contentStyle={{
+              backgroundColor: "#1D1D1D",
+              border: "none",
+              borderRadius: "0px",
+              color: "#FBFBFB",
+            }}
+            itemStyle={{ color: "#FBFBFB" }}
             formatter={(value) => [`${value} SPS`, "Speed"]}
             labelFormatter={(label) => `Time: ${label}s`}
           />
           <Line
             type="monotone"
             dataKey="sps"
-            stroke="#f97316"
+            stroke="#436092"
             dot={false}
             strokeWidth={2}
           />
