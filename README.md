@@ -26,10 +26,9 @@ The displayed information includes:
 - SPS Over Time graph
 - Average SPS (Syllables Per Second)
 - Peak SPS
-- Total word count
 - Total syllable count
+- Total word count
 - Time of Peak SPS occurrence
-- Overall Comparison
 
 ### 2. Rap Battle
 This feature allows users to identify plants through photos. Users can upload a plant image by selecting a file from their device or by dragging and dropping the image into the designated area. Once the image is uploaded, the system will analyze it and display information about the identified plant, including common name, scientific name, family, genus, and the year it was identified.
