@@ -19,7 +19,17 @@ https:/
 This platform provides 2 features that users can utilize. Below is an explanation of both features and their functionalities.
 
 ### 1. Track Analysis
-This feature allows users to search for plant information by name. Users can type the plant name (common name or scientific name) in the search field, then press the search button or Enter. The system will display detailed information about the relevant plant, including common name, scientific name, family, genus, and the year it was identified.
+Track Analysis allows users to analyze a single rap song simply by entering the song link from a music streaming platform. Once the analysis process is complete, the system will display various information regarding the rap performance in that song, enabling users to understand the characteristics of the flow, tempo, and rap dynamics more objectively.
+<br><br>
+The displayed information includes:
+- Song title & artist name
+- SPS Over Time graph
+- Average SPS (Syllables Per Second)
+- Peak SPS
+- Total word count
+- Total syllable count
+- Time of Peak SPS occurrence
+- Overall Comparison
 
 ### 2. Rap Battle
 This feature allows users to identify plants through photos. Users can upload a plant image by selecting a file from their device or by dragging and dropping the image into the designated area. Once the image is uploaded, the system will analyze it and display information about the identified plant, including common name, scientific name, family, genus, and the year it was identified.
