@@ -53,6 +53,8 @@ The platform is designed for a wide range of users, including:
 
 ## ⚙️ Implementation Details
 
+## ❓ What is SPS (Syllable per Second)?
+
 All stock photos used for this project are from Pexels and Unsplash
 
 <i> Copyright © 2026 devinammar. All rights reserved.
