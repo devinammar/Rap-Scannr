@@ -2,7 +2,7 @@ on progress - di rap battle blm bisa kalo paste link dari soundcloud, tapi di tr
 
 # Rap Scannr
 
-Lorem ipsum.
+Rap Scannr is an AI-powered web platform designed to analyze rap speed, allowing anyone to analyze and compare rap songs using music links from various streaming platforms. Users can explore detailed information about each track, including rap speed statistics, flow visualization, and performance comparisons through an intuitive and user-friendly interface. By combining artificial intelligence (AI) with interactive data visualization, Rap Scannr provides a modern and accessible way to explore rap music from a more objective and analytical perspective.
 
 Click this to open the website :
 
