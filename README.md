@@ -26,11 +26,11 @@ This feature allows users to identify plants through photos. Users can upload a 
 
 ## 🎯 Goals & Objectives
 
-Rap Scannr was developed to provide a platform that helps users analyze and compare the performance of rap songs more objectively through easy-to-understand data visualizations.
+Rap Scannr was developed to provide a platform that helps users analyze and compare the performance of rap songs (especially the speed of rap songs) more objectively through easy-to-understand data visualizations.
 <br><br>
 The platform is designed for a wide range of users, including:
 
-- Rap music enthusiasts who want to track the performance of their favorite rappers
+- Rap music enthusiasts who want to track the performance of their favorite songs or rappers
 - Rappers looking to evaluate their own rap techniques and performance
 - Content creators who produce content focused on music or rap analysis
 - Researchers interested in music and audio analysis
