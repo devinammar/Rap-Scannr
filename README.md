@@ -1,4 +1,4 @@
-on progress - harus ganti warna rechart jadi hijau (hitam-hijau; saat ini masih warna hitam-oren)
+on progress - di rap battle blm bisa kalo paste link dari soundcloud, tapi di track analysis udh bisa
 
 # Rap Scannr
 
