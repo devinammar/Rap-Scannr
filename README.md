@@ -16,7 +16,24 @@ https:/
 
 ## ✨ Features
 
+This platform provides 2 features that users can utilize. Below is an explanation of both features and their functionalities.
+
+### 1. Track Analysis
+This feature allows users to search for plant information by name. Users can type the plant name (common name or scientific name) in the search field, then press the search button or Enter. The system will display detailed information about the relevant plant, including common name, scientific name, family, genus, and the year it was identified.
+
+### 2. Rap Battle
+This feature allows users to identify plants through photos. Users can upload a plant image by selecting a file from their device or by dragging and dropping the image into the designated area. Once the image is uploaded, the system will analyze it and display information about the identified plant, including common name, scientific name, family, genus, and the year it was identified.
+
 ## 🎯 Goals & Objectives
+
+Rap Scannr was developed to provide a platform that helps users analyze and compare the performance of rap/hip-hop songs more objectively through easy-to-understand data visualizations.
+<br>
+The platform is designed for a wide range of users, including:
+
+- Rap music enthusiasts who want to track the performance of their favorite rappers
+- Rappers looking to evaluate their own rap techniques and performance
+- Content creators who produce content focused on music or rap analysis
+- Researchers interested in music and audio analysis
 
 ## 📋 Software Development Life Cycle (SDLC)
 
