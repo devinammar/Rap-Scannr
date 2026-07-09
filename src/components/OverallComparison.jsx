@@ -48,7 +48,8 @@ export const OverallComparison = ({ song1, song2 }) => {
               }}
               itemStyle={{ color: "#FBFBFB" }}
             />
-            <Legend />
+            <Legend 
+            wrapperStyle={{ paddingTop: "16px", gap: "24px" }}/>
             <Bar dataKey={title1} fill="#1D1D1D" />
             <Bar dataKey={title2} fill="#436092" />
           </BarChart>
