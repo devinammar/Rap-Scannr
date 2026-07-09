@@ -33,7 +33,7 @@ The displayed information includes:
 ### 2. Rap Battle
 Rap Battle allows users to compare two rap songs directly simply by entering two song links from a supported music streaming platform. Once both songs have been analyzed, the system will display the analysis results for each song along with a performance comparison, making it easier for users to see the differences in rap techniques.
 <br><br>
-In addition to the analysis results for each song, Rap Battle provides an Overall Comparison feature that helps users see the differences between the two songs based on their Average SPS and Peak SPS.
+In addition to the analysis results for each song, Rap Battle provides an Overall Comparison that helps users see the differences between the two songs based on their Average SPS and Peak SPS.
 
 ## 🎯 Goals & Objectives
 
