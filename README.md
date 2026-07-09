@@ -6,7 +6,7 @@ Rap Scannr is an AI-powered web platform designed to analyze rap speed, allowing
 
 Click this to open the website :
 
-[![Flant](https://img.shields.io/badge/Rap%20Scannr%20-Visit-white)](https:)
+[![RapScannr](https://img.shields.io/badge/Rap%20Scannr%20-Visit-white)](https:)
 
 Or you can copy this link and paste it into your browser:
 
