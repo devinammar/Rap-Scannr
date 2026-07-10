@@ -55,14 +55,30 @@ The platform is designed for a wide range of users, including:
 
 ## 🛠️ Tech Stack
 
-- ### HTML, Tailwind CSS, ReactJS + Vite
-- ### Node.js, Express.js & Docker
-- ### Sanity.io (CMS)
-- ### API & Library:
-  [Groq.com](https://groq.com/)
-- ### Figma
-  [Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1)
-- ### Adobe Photoshop
+### Frontend
+- HTML
+- Tailwind CSS
+- ReactJS + Vite
+
+### Backend
+- Node.js
+- Express.js
+- Docker
+
+### CMS
+- Sanity.io
+
+### Data Visualization
+- Recharts
+
+### API & Library:
+- Groq [Groq.com](https://groq.com/)
+
+### UI/UX
+- Figma [Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1)
+
+### Logo 
+- Adobe Photoshop
 
 ## ⚙️ Implementation Details
 
