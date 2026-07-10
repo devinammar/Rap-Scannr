@@ -48,8 +48,10 @@ The platform is designed for a wide range of users, including:
 
 ## 📋 Software Development Life Cycle (SDLC)
 
-## 🏗️ System Architecture Diagram
+## 🏗️ System Architecture
 ![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/cb4d6edaa730a9c35edfb3887276a60ce019631d/Software%20Architecture.jpg)
+
+### File Structure
 
 ## 🛠️ Tech Stack
 
