@@ -52,6 +52,188 @@ The platform is designed for a wide range of users, including:
 ![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/cb4d6edaa730a9c35edfb3887276a60ce019631d/Software%20Architecture.jpg)
 
 ### File Structure
+```
+Rap-Scannr-main
+│
+├── README.md
+├── Software Architecture.jpg
+├── .gitignore
+│
+├── backend
+│   │
+│   ├── .gitignore
+│   ├── docker-compose.yml
+│   │
+│   ├── gateway
+│   │   ├── package.json
+│   │   ├── package-lock.json
+│   │   ├── app.js
+│   │   ├── server.js
+│   │   │
+│   │   └── routes
+│   │       └── gateway.routes.js
+│   │
+│   └── services
+│       │
+│       └── sps-service
+│           │
+│           ├── package.json
+│           ├── package-lock.json
+│           ├── server.js
+│           ├── app.js
+│           ├── result.json
+│           │
+│           ├── test-audio.js
+│           ├── test-download.js
+│           ├── test-lyric.js
+│           ├── test-sps.js
+│           ├── test-syllable.js
+│           └── test-whisper.js
+│           │
+│           ├── routes
+│           │   └── analysis.routes.js
+│           │
+│           ├── modules
+│           │   │
+│           │   ├── chart
+│           │   │   ├── chart.controller.js
+│           │   │   └── chart.service.js
+│           │   │
+│           │   ├── get-audio
+│           │   │   ├── audio.controller.js
+│           │   │   ├── audio.service.js
+│           │   │   └── audio.utils.js
+│           │   │
+│           │   ├── get-lyric
+│           │   │   ├── lyric.controller.js
+│           │   │   ├── lyric.service.js
+│           │   │   └── whisper.client.js
+│           │   │
+│           │   ├── source-handler
+│           │   │   ├── providerFactory.js
+│           │   │   ├── sourceHandler.controller.js
+│           │   │   ├── sourceHandler.service.js
+│           │   │   │
+│           │   │   └── providers
+│           │   │       ├── appleMusic.provider.js
+│           │   │       ├── deezer.provider.js
+│           │   │       ├── generic.provider.js
+│           │   │       ├── soundcloud.provider.js
+│           │   │       ├── spotify.provider.js
+│           │   │       └── youtube.provider.js
+│           │   │
+│           │   ├── sps
+│           │   │   ├── metric.service.js
+│           │   │   ├── sps.controller.js
+│           │   │   └── sps.service.js
+│           │   │
+│           │   ├── syllable
+│           │   │   ├── syllable.controller.js
+│           │   │   ├── syllable.service.js
+│           │   │   └── syllable.utils.js
+│           │   │
+│           │   └── timestamp
+│           │       ├── timestamp.controller.js
+│           │       └── timestamp.service.js
+│           │
+│           ├── utils
+│           │   ├── appleMusicMetadata.js
+│           │   ├── deezerMetadata.js
+│           │   ├── soundcloudMetadata.js
+│           │   ├── spotifyMetadata.js
+│           │   ├── spsCalculator.js
+│           │   ├── syllableCounter.js
+│           │   ├── whisperJsonParser.js
+│           │   ├── whisperParser.js
+│           │   ├── whisperRunner.js
+│           │   ├── youtubeDownloader.js
+│           │   └── youtubeSearch.js
+│           │
+│           └── whisper.cpp
+│               └── (external Whisper.cpp source code)
+│
+│
+├── public
+│   │
+│   ├── ashok-chakravarthi-WwhQ9u8EhkI-unsplash.jpg
+│   ├── banner1.png
+│   ├── facebook.png
+│   ├── github.png
+│   ├── hamburgericonblack.png
+│   ├── hamburgericonwhite.png
+│   ├── imagearea2.jpg
+│   ├── imagearea3-1.png
+│   ├── imagearea3-2.png
+│   ├── imagearea3-3.png
+│   ├── instagram.png
+│   ├── linkedin.png
+│   ├── next.png
+│   ├── nextgrey.png
+│   ├── pexels-din-127253222-14853507.jpg
+│   ├── pexels-erick-richards-2112514569-30316347.jpg
+│   ├── pexels-introspectivedsgn-7464823.jpg
+│   ├── pexels-zachtheshoota-2067689.jpg
+│   ├── previous.png
+│   └── previousgrey.png
+│
+│
+├── src
+│   │
+│   ├── main.jsx
+│   ├── main.css
+│   │
+│   ├── assets
+│   │   └── react.svg
+│   │
+│   ├── cms
+│   │   └── sanityClient.js
+│   │
+│   ├── services
+│   │   └── api.js
+│   │
+│   ├── hooks
+│   │   ├── useHideOnScroll.js
+│   │   ├── useRapBattle.js
+│   │   └── useTrackAnalysis.js
+│   │
+│   ├── pages
+│   │   ├── about.jsx
+│   │   ├── home.jsx
+│   │   ├── profile.jsx
+│   │   ├── rapbattle.jsx
+│   │   └── trackanalysis.jsx
+│   │
+│   └── components
+│       │
+│       ├── OverallComparison.jsx
+│       ├── PeakSpeedInfo.jsx
+│       ├── SPSOverTimeChart.jsx
+│       ├── StatisticTable.jsx
+│       ├── TitleAndArtist.jsx
+│       ├── button.jsx
+│       ├── searchbar.jsx
+│       ├── sidebar.jsx
+│       ├── staticbanner.jsx
+│       ├── topbar.jsx
+│       │
+│       ├── home
+│       │   ├── area1.jsx
+│       │   ├── area2.jsx
+│       │   ├── area3.jsx
+│       │   ├── area4.jsx
+│       │   ├── area5.jsx
+│       │   └── area6.jsx
+│       │
+│       ├── rapbattle
+│       │   ├── area1.jsx
+│       │   └── area2.jsx
+│       │
+│       └── trackanalysis
+│           ├── area1.jsx
+│           └── area2.jsx
+│
+└── vite.config.js
+```
 
 ## 🛠️ Tech Stack
 
