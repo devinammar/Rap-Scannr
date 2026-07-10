@@ -73,7 +73,9 @@ The platform is designed for a wide range of users, including:
 
 ### API & Library:
 - Groq ([Groq.com](https://groq.com/))
-- soundcloud-scraper
+- iTunes public API
+- Deezer API
+- soundcloud-scraper (from NPM)
 
 ### Design
 - Figma (UI/UX) ([Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1))
