@@ -56,7 +56,6 @@ The platform is designed for a wide range of users, including:
 Rap-Scannr
 │
 ├── README.md
-├── Software Architecture.jpg
 ├── .gitignore
 │
 ├── backend
