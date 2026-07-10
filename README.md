@@ -68,15 +68,13 @@ The platform is designed for a wide range of users, including:
 ### CMS
 - Sanity.io
 
-### Data Visualization
-- Recharts
-
 ### API & Library:
 - Groq ([Groq.com](https://groq.com/))
 - YouTube MP3 API ([RapidAPI](https://rapidapi.com/ytjar/api/YouTube%20MP3))
 - iTunes public API
 - Deezer API
 - soundcloud-scraper (from NPM)
+- Recharts (Data Visualization)
 
 ### Design
 - Figma (UI/UX) ([Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1))
