@@ -72,7 +72,7 @@ The platform is designed for a wide range of users, including:
 - Recharts
 
 ### API & Library:
-- Groq [Groq.com](https://groq.com/)
+- Groq ([Groq.com](https://groq.com/))
 
 ### Design
 - Figma (UI/UX) ([Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1))
