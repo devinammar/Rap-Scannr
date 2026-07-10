@@ -35,7 +35,7 @@ export const OverallComparison = ({ song1, song2 }) => {
       </p>
       <div className="w-full h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={data}>
+          <BarChart data={data} margin={{ top: 0, right: 0, left: -30, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
             <XAxis dataKey="metric" />
             <YAxis />
@@ -48,8 +48,25 @@ export const OverallComparison = ({ song1, song2 }) => {
               }}
               itemStyle={{ color: "#FBFBFB" }}
             />
-            <Legend 
-            wrapperStyle={{ paddingTop: "16px", gap: "24px" }}/>
+            <Legend
+              verticalAlign="bottom"
+              content={({ payload }) => (
+                <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-20 pt-5 px-6 sm:px-0">
+                  {payload.map((entry, index) => (
+                    <div
+                      key={`item-${index}`}
+                      className="flex items-center gap-2 text-p text-[#1D1D1D]"
+                    >
+                      <div
+                        className="w-3 h-3 flex-shrink-0"
+                        style={{ backgroundColor: entry.color }}
+                      />
+                      <span className="text-center">{entry.value}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            />
             <Bar dataKey={title1} fill="#1D1D1D" />
             <Bar dataKey={title2} fill="#436092" />
           </BarChart>
