@@ -8,9 +8,10 @@ export const PeakSpeedInfo = ({ peakSPS, peakTime }) => {
   if (!peakSPS) return null;
 
   return (
-    <div className="bg-grey/20 px-10 py-7">
+    <div className="bg-grey/10 px-10 py-7 shadow-[inset_0_0_0_4px_var(--color-black)]">
       <p className="text-p font-medium text-black">
-        Peak Speed: {peakSPS} SPS at {formatTime(peakTime)}
+        Peak Speed: <span className="text-blue">{peakSPS} SPS</span> at{" "}
+        <span className="text-blue">{formatTime(peakTime)}</span>
       </p>
     </div>
   );

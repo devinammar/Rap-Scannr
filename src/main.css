@@ -6,6 +6,7 @@
   --color-grey: #A4A4A4;
   --color-brown: #B39D82;
   --color-blue: #436092;
+  --color-orange: #DF804A;
   --color-white: #FBFBFB;
   --text-p: 16px;
   --text-h1: 120px;
@@ -15,6 +16,7 @@
   --text-h2-2: 52px;
   --text-h2-3: 40px;
   --text-h3: 24px;
+  --text-h4: 20px;
 }
 
 @layer base {

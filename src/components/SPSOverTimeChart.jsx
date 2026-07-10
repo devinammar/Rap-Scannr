@@ -12,20 +12,20 @@ export const SPSOverTimeChart = ({ data }) => {
   if (!data || data.length === 0) return null;
 
   return (
-    <div className="w-full h-[400px] bg-grey/20 px-10 py-7">
+      <div className="w-full h-[400px] bg-grey/10 px-10 py-7 shadow-[inset_0_0_0_4px_var(--color-black)]">
       <p className="text-h3 font-medium text-black text-center mb-6">
         SPS Overtime
       </p>
       <ResponsiveContainer width="100%" height="80%">
-        <LineChart data={data}>
+        <LineChart data={data} margin={{ top: 0, right: 0, left: 0, bottom: 30 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
           <XAxis
             dataKey="time"
-            label={{ value: "Time (s)", position: "insideBottom", offset: -5 }}
+            label={{ value: "Time (s)", position: "insideBottom", offset: -20 }}
             tick={{ fontSize: 12 }}
           />
           <YAxis
-            label={{ value: "SPS", angle: -90, position: "insideLeft" }}
+            label={{ value: "SPS", angle: -90, position: "insideLeft", offset: 20 }}
             tick={{ fontSize: 12 }}
           />
           <Tooltip

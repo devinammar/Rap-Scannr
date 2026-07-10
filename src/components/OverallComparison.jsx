@@ -14,7 +14,7 @@ export const OverallComparison = ({ song1, song2 }) => {
 
   const data = [
     {
-      metric: "Avg SPS",
+      metric: "Average SPS",
       [song1.meta.title || "Song 1"]: song1.stats.averageSPS,
       [song2.meta.title || "Song 2"]: song2.stats.averageSPS,
     },
@@ -29,7 +29,7 @@ export const OverallComparison = ({ song1, song2 }) => {
   const title2 = song2.meta.title || "Song 2";
 
   return (
-    <div className="w-full bg-grey/20 px-10 py-7">
+    <div className="w-full bg-grey/10 px-10 py-7 shadow-[inset_0_0_0_4px_var(--color-black)]">
       <p className="text-h3 font-medium text-black text-center mb-6">
         Overall Comparison
       </p>
