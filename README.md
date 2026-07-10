@@ -73,6 +73,7 @@ The platform is designed for a wide range of users, including:
 
 ### API & Library:
 - Groq ([Groq.com](https://groq.com/))
+- YouTube MP3 API ([RapidAPI](https://rapidapi.com/ytjar/api/YouTube%20MP3))
 - iTunes public API
 - Deezer API
 - soundcloud-scraper (from NPM)
