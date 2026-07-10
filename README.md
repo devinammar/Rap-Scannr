@@ -53,7 +53,7 @@ The platform is designed for a wide range of users, including:
 
 ### File Structure
 ```
-Rap-Scannr-main
+Rap-Scannr
 │
 ├── README.md
 ├── Software Architecture.jpg
