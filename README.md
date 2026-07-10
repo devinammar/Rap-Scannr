@@ -1,4 +1,4 @@
-on progress - di rap battle blm bisa kalo paste link dari soundcloud, tapi di track analysis udh bisa
+on progress
 
 # Rap Scannr
 
