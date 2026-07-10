@@ -153,7 +153,7 @@ Rap-Scannr
 │               └── (external Whisper.cpp source code)
 │
 │
-├── public
+├── public ── (media assets)
 │   │
 │   ├── ashok-chakravarthi-WwhQ9u8EhkI-unsplash.jpg
 │   ├── banner1.png
