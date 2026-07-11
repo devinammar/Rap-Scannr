@@ -279,6 +279,7 @@ Source:
 - https://worldcrunch.com/culture-society/syllable-counting-and-the-secret-to-the-39speed39-of-languages
 - https://www.musictimes.com/articles/107117/20241224/10-fastest-rappers-world-syllable-speedsters-you-cant-miss-eminem-crucified.htm
 
+## 📝 Notes
 All stock photos used for this project are from Pexels and Unsplash
 
 <i> Copyright © 2026 devinammar. All rights reserved.
