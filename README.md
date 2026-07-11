@@ -47,6 +47,24 @@ The platform is designed for a wide range of users, including:
 - Researchers interested in music and audio analysis
 
 ## 📋 Software Development Life Cycle (SDLC)
+![SDLC](https:)
+Rap Scannr was developed using an iterative Agile approach. Each stage involves a continuous cycle comprising implementation, testing, evaluation, and refinement whenever improvements are required. This iterative workflow allows both the system architecture and application features to evolve effectively throughout the development process, rather than following a strictly linear path.
+1. **Problem Identification and Requirements Analysis**
+
+2. **UI/UX & System Design**
+
+3. **Frontend Development**
+The frontend application was developed using React.js, Vite, and Tailwind CSS with an emphasis on component reusability, responsive design, and maintainable project structure. Core pages such as Home, Track Analysis, and Rap Battle were implemented alongside reusable UI components including Searchbar, Statistic Table, SPS Over Time Chart, Peak Speed Information, Title and Artist, and Overall Comparison. Throughout development, the interface was continuously refined to improve responsiveness, user interaction, visual consistency, and overall usability across different screen sizes and devices
+4. **Backend Development**
+The backend was developed using Node.js and Express, employing a modular architecture to facilitate system development and maintenance. The song analysis process encompasses audio transcription using OpenAI’s whisper-large-v3-turbo AI model, timestamp extraction, syllable counting, calculation of Syllables Per Second (SPS), and the generation of graph data. Throughout development, the backend architecture was continuously refined by implementing the Provider Factory Pattern, Source Handlers, and platform-specific providers; this enables the system to support YouTube, Spotify, SoundCloud, Apple Music, and Deezer while adhering to software engineering best practices regarding code structure and workflows
+5. **API Testing (Postman)**
+Before integrating the frontend with the backend, all API endpoints were thoroughly tested using Postman to verify their correctness and reliability. Each endpoint was validated to ensure it returned accurate responses, handled invalid requests appropriately, and successfully processed music links from every supported streaming platform. Additional testing was performed to verify response consistency, error handling, timeout behavior, and overall communication between the API Gateway and the SPS Service, ensuring the backend was stable before frontend integration began
+6. **Frontend–Backend Integration**
+After the backend services had been validated, the frontend application was integrated with the API Gateway using Axios. User interactions, including submitting music URLs for Track Analysis and Rap Battle, were connected to the backend processing pipeline. The returned analysis data—including song metadata, SPS statistics, charts, and comparison results—was then rendered dynamically using reusable frontend components. This stage also involved verifying data synchronization, loading states, error handling, and the overall user experience throughout the integration process
+7. **Feature Testing**
+Comprehensive testing was conducted on all implemented features to ensure the application functioned as expected under different scenarios. Both the Track Analysis and Rap Battle features were tested using music links from YouTube, Spotify, SoundCloud, Apple Music, and Deezer. Testing covered API communication, analysis accuracy, UI rendering, loading behavior, responsive layouts, and error handling. Any issues discovered during testing were immediately evaluated and resolved through iterative improvements before proceeding to the final deployment stage
+8. **Deployment**
+
 
 ## 🏗️ System Architecture
 ![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/cb4d6edaa730a9c35edfb3887276a60ce019631d/Software%20Architecture.jpg)
