@@ -81,7 +81,7 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
 
 
 ## 🏗️ System Architecture
-![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/cb4d6edaa730a9c35edfb3887276a60ce019631d/Software%20Architecture.jpg)
+![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/de59ece731c5b808a8cf0144519414badc43145f/Software%20Architecture%202.jpg)
 
 ### File Structure
 ```
