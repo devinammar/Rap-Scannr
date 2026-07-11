@@ -295,8 +295,6 @@ Rap-Scannr
 - Figma (UI/UX) ([Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1))
 - Adobe Photoshop (Create Logo)
 
-## ⚙️ Implementation Details
-
 ## ❓ What is SPS (Syllable per Second)?
 
 SPS (Syllables Per Second) is a measurement used to calculate how many syllables are delivered within one second of vocal performance. In rap analysis, SPS is commonly used to evaluate rap delivery speed, where a higher SPS value indicates that a rapper is articulating more syllables in a shorter amount of time. The calculation is performed by dividing the total number of syllables by the duration of the rap section in seconds: SPS = Total Syllables ÷ Duration (seconds). While speed is not the only factor that determines rap quality, SPS provides a quantitative way to analyze technical aspects of flow, cadence, and vocal intensity.
