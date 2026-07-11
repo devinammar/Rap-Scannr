@@ -51,7 +51,7 @@ export const OverallComparison = ({ song1, song2 }) => {
             <Legend
               verticalAlign="bottom"
               content={({ payload }) => (
-                <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-20 pt-5 px-6 sm:px-0">
+                <div className="w-full flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-20 pt-5 pr-6 pl-12">
                   {payload.map((entry, index) => (
                     <div
                       key={`item-${index}`}
