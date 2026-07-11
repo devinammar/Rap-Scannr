@@ -51,11 +51,15 @@ The platform is designed for a wide range of users, including:
 Rap Scannr was developed using an iterative Agile approach. Each stage involves a continuous cycle comprising implementation, testing, evaluation, and refinement whenever improvements are required. This iterative workflow allows both the system architecture and application features to evolve effectively throughout the development process, rather than following a strictly linear path.
 1. **Problem Identification and Requirements Analysis**
 
+   At the beginning of the project, an analysis was conducted to identify the problems experienced by potential users, particularly rap music enthusiasts who wanted to explore rap performance beyond simply listening to songs. The application also aims to accept music links from multiple streaming platforms, process audio automatically, analyze rap performance using measurable metrics, visualize the analysis results, and provide comparison capabilities between two different tracks while maintaining a responsive and user-friendly web interface.
+
 2. **UI/UX & System Design**
+
+   During this stage, the User Interface (UI) and User Experience (UX) were designed, including the website layout, typography, color palette, and visual hierarchy using Figma. In addition, the Rap Scannr logo was designed using Adobe Photoshop to establish the website's visual identity. Concurrently with that process, the architecture and processing workflow for music links from various platforms are being designed to generate the data that will be displayed to the user. Furthermore, the technologies, libraries, APIs, and visual assets required throughout the development process were identified and selected.
 
 3. **Frontend Development**
 
-   The frontend application was developed using React.js, Vite, and Tailwind CSS with an emphasis on component reusability, responsive design, and maintainable project structure. Core pages such as Home, Track Analysis, and Rap Battle were implemented alongside reusable UI components including Searchbar, Statistic Table, SPS Over Time Chart, Peak Speed Information, Title and Artist, and Overall Comparison. Throughout development, the interface was continuously refined to improve responsiveness, user interaction, visual consistency, and overall usability across different screen sizes and devices
+   The frontend application was developed using React.js, Vite, and Tailwind CSS with an emphasis on component reusability, responsive design, and maintainable project structure. Throughout development, the interface was continuously refined to improve responsiveness, user interaction, visual consistency, and overall usability across different screen sizes and devices
 
 4. **Backend Development**
    
