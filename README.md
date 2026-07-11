@@ -267,6 +267,17 @@ Rap-Scannr
 
 ## ❓ What is SPS (Syllable per Second)?
 
+SPS (Syllables Per Second) is a measurement used to calculate how many syllables are delivered within one second of vocal performance. In rap analysis, SPS is commonly used to evaluate rap delivery speed, where a higher SPS value indicates that a rapper is articulating more syllables in a shorter amount of time. The calculation is performed by dividing the total number of syllables by the duration of the rap section in seconds: SPS = Total Syllables ÷ Duration (seconds). While speed is not the only factor that determines rap quality, SPS provides a quantitative way to analyze technical aspects of flow, cadence, and vocal intensity.
+<br><br>
+Syllables Per Second is a metric that is used in rap analysis and research to describe the rate at which syllables appear during a verse. Studies of rap flow have used syllable rate as one of the measurements to analyze rhythmic patterns and delivery speed across different artists and songs. However, SPS is not an official industry-wide standard like BPM (Beats Per Minute); instead, it is a commonly used analytical metric among rap enthusiasts, researchers, and music analysis tools for comparing vocal speed and flow complexity.
+<br><br>
+In Rap-Scannr, SPS is used as one of the main metrics to visualize rap performance by showing changes in syllable delivery speed throughout a song. This allows users to identify sections with faster flows, measure peak rap speed, and compare delivery techniques between different songs through features such as Track Analysis and Rap Battle.
+<br><br>
+Source
+- MCFlow: A Digital Corpus of Rap Transcriptions (penelitian tentang analisis flow rap menggunakan syllables per second) https://paperzz.com/doc/8811954/mcflow--a-digital-corpus-of-rap-transcriptions
+- Rojak Daily — pembahasan pengukuran rap speed menggunakan SPS, syllables per bar, BPM, dan spBeat
+https://gempak.com/rojakdaily/entertainment/were-working-malaysia-book-records-find-malaysias-fastest-rapper-63927
+
 All stock photos used for this project are from Pexels and Unsplash
 
 <i> Copyright © 2026 devinammar. All rights reserved.
