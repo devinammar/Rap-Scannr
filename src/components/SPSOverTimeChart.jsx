@@ -12,8 +12,8 @@ export const SPSOverTimeChart = ({ data }) => {
   if (!data || data.length === 0) return null;
 
   return (
-      <div className="w-full h-[400px] bg-grey/10 px-10 py-7 shadow-[inset_0_0_0_4px_var(--color-black)]">
-      <p className="text-h3 font-medium text-black text-center mb-6">
+      <div className="w-full h-[400px] bg-grey/10 px-10 py-7 max-[560px]:px-8 max-[560px]:pl-4 shadow-[inset_0_0_0_4px_var(--color-black)]">
+      <p className="text-h3 font-medium text-black text-center pl-4 mb-6">
         SPS Overtime
       </p>
       <ResponsiveContainer width="100%" height="80%">
