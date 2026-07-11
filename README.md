@@ -63,7 +63,7 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
 
 4. **Backend Development**
    
-   The backend was developed using Node.js and Express, employing a modular architecture to facilitate system development and maintenance. The song analysis process encompasses audio transcription using OpenAI’s whisper-large-v3-turbo AI model, timestamp extraction, syllable counting, calculation of Syllables Per Second (SPS), and the generation of graph data. Throughout development, the backend architecture was continuously refined by implementing the Provider Factory Pattern, Source Handlers, and platform-specific providers. This enables the system to support YouTube, Spotify, SoundCloud, Apple Music, and Deezer while adhering to software engineering best practices regarding code structure and workflows
+   The backend was developed using Node.js and Express, employing a modular architecture to facilitate system development and maintenance. The song analysis process encompasses audio transcription using OpenAI’s Whisper Large v3 Turbo AI model, timestamp extraction, syllable counting, calculation of Syllables Per Second (SPS), and the generation of graph data. Throughout development, the backend architecture was continuously refined by implementing the Provider Factory Pattern, Source Handlers, and platform-specific providers. This enables the system to support YouTube, Spotify, SoundCloud, Apple Music, and Deezer while adhering to software engineering best practices regarding code structure and workflows
 
 5. **API Testing (Postman)**
    
@@ -282,11 +282,13 @@ Rap-Scannr
 - Sanity.io
 
 ### API & Library
-- Groq; model whisper-large-v3-turbo from OpenAI ([Groq.com](https://groq.com/))
+- Whisper Large v3 Turbo AI model from OpenAI ([Groq.com](https://groq.com/))
 - YouTube MP3 API ([RapidAPI](https://rapidapi.com/ytjar/api/YouTube%20MP3))
+- spotify-url-info (from NPM)
 - iTunes public API
 - Deezer API
 - soundcloud-scraper (from NPM)
+- ffmpeg (Audio Processing)
 - Recharts (Data Visualization)
 
 ### Deployment
