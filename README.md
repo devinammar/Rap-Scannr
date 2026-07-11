@@ -65,7 +65,7 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
    
    The backend was developed using Node.js and Express, employing a modular architecture to facilitate system development and maintenance. The song analysis process encompasses audio transcription using OpenAI’s Whisper Large v3 Turbo AI model, timestamp extraction, syllable counting, calculation of Syllables Per Second (SPS), and the generation of graph data. Throughout development, the backend architecture was continuously refined by implementing the Provider Factory Pattern, Source Handlers, and platform-specific providers. This enables the system to support YouTube, Spotify, SoundCloud, Apple Music, and Deezer while adhering to software engineering best practices regarding code structure and workflows
 
-5. **API Testing (Postman)**
+5. **API Testing**
    
    Before integrating the frontend with the backend, all API endpoints were thoroughly tested using Postman to verify their correctness and reliability. Each endpoint was validated to ensure it returned accurate responses, handled invalid requests appropriately, and successfully processed music links from every supported streaming platform. Additional testing was performed to verify response consistency, error handling, timeout behavior, and overall communication between the API Gateway and the SPS Service, ensuring the backend was stable before frontend integration began
 
@@ -276,6 +276,7 @@ Rap-Scannr
 ### Backend
 - Node.js
 - Express.js
+- Postman
 - Docker
 
 ### CMS
