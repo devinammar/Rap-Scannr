@@ -59,7 +59,7 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
 
 4. **Backend Development**
    
-   The backend was developed using Node.js and Express, employing a modular architecture to facilitate system development and maintenance. The song analysis process encompasses audio transcription using OpenAI’s whisper-large-v3-turbo AI model, timestamp extraction, syllable counting, calculation of Syllables Per Second (SPS), and the generation of graph data. Throughout development, the backend architecture was continuously refined by implementing the Provider Factory Pattern, Source Handlers, and platform-specific providers; this enables the system to support YouTube, Spotify, SoundCloud, Apple Music, and Deezer while adhering to software engineering best practices regarding code structure and workflows
+   The backend was developed using Node.js and Express, employing a modular architecture to facilitate system development and maintenance. The song analysis process encompasses audio transcription using OpenAI’s whisper-large-v3-turbo AI model, timestamp extraction, syllable counting, calculation of Syllables Per Second (SPS), and the generation of graph data. Throughout development, the backend architecture was continuously refined by implementing the Provider Factory Pattern, Source Handlers, and platform-specific providers. This enables the system to support YouTube, Spotify, SoundCloud, Apple Music, and Deezer while adhering to software engineering best practices regarding code structure and workflows
 
 5. **API Testing (Postman)**
    
@@ -67,7 +67,7 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
 
 6. **Frontend–Backend Integration**
     
-   After the backend services had been validated, the frontend application was integrated with the API Gateway using Axios. User interactions, including submitting music URLs for Track Analysis and Rap Battle, were connected to the backend processing pipeline. The returned analysis data—including song metadata, SPS statistics, charts, and comparison results—was then rendered dynamically using reusable frontend components. This stage also involved verifying data synchronization, loading states, error handling, and the overall user experience throughout the integration process
+   After the backend services had been validated, the frontend application was integrated with the API Gateway using Axios. User interactions, including submitting music URLs for Track Analysis and Rap Battle, were connected to the backend processing pipeline. The returned analysis data, including song metadata, SPS statistics, charts, and comparison results was then rendered dynamically using reusable frontend components. This stage also involved verifying data synchronization, loading states, error handling, and the overall user experience throughout the integration process
 
 7. **Feature Testing**
     
