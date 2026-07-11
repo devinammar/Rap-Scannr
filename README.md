@@ -274,9 +274,10 @@ Syllables Per Second is a metric that is used in rap analysis and research to de
 In Rap-Scannr, SPS is used as one of the main metrics to visualize rap performance by showing changes in syllable delivery speed throughout a song. This allows users to identify sections with faster flows, measure peak rap speed, and compare delivery techniques between different songs through features such as Track Analysis and Rap Battle.
 <br><br>
 Source:
-- MCFlow: A Digital Corpus of Rap Transcriptions, https://paperzz.com/doc/8811954/mcflow--a-digital-corpus-of-rap-transcriptions
-- Rojak Daily — pembahasan pengukuran rap speed menggunakan SPS, syllables per bar, BPM, dan spBeat
-https://gempak.com/rojakdaily/entertainment/were-working-malaysia-book-records-find-malaysias-fastest-rapper-63927
+- https://paperzz.com/doc/8811954/mcflow--a-digital-corpus-of-rap-transcriptions
+- https://emusicology.org/article/id/4737/
+- https://worldcrunch.com/culture-society/syllable-counting-and-the-secret-to-the-39speed39-of-languages
+- https://www.musictimes.com/articles/107117/20241224/10-fastest-rappers-world-syllable-speedsters-you-cant-miss-eminem-crucified.htm
 
 All stock photos used for this project are from Pexels and Unsplash
 
