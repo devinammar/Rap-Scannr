@@ -160,7 +160,7 @@ export const Area5 = () => {
           >
             {currentSlide ? currentSlide.caption : "Loading..."}
           </motion.p>
-          <motion.div {...scrollProps} variants={fadeRight}>
+          <motion.div {...scrollProps} variants={isMobile ? fadeLeft : fadeRight}>
             <Link
               className="bg-black h-10 flex w-[222px] hover:bg-black/50 max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full justify-center"
               to="about"
