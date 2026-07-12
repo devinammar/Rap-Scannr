@@ -47,7 +47,7 @@ The platform is designed for a wide range of users, including:
 - Researchers interested in music and audio analysis
 
 ## 📋 Software Development Life Cycle (SDLC)
-![SDLC]()
+![SDLC](https://github.com/devinammar/Rap-Scannr/blob/921f35a1f600a8f9bd662230e881487eb43cb17e/Agile%20(SDLC).png)
 Rap Scannr was developed using an iterative Agile approach. Each stage involves a continuous cycle comprising implementation, testing, evaluation, and refinement whenever improvements are required. This iterative workflow allows both the system architecture and application features to evolve effectively throughout the development process, rather than following a strictly linear path.
 1. **Problem Identification and Requirements Analysis**
 
@@ -81,7 +81,7 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
 
 
 ## 🏗️ System Architecture
-![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/de59ece731c5b808a8cf0144519414badc43145f/Software%20Architecture%202.jpg)
+![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/921f35a1f600a8f9bd662230e881487eb43cb17e/Software%20Architecture.jpg)
 
 ### File Structure
 ```
