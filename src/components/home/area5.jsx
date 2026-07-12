@@ -3,6 +3,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { client, urlFor } from "../../cms/sanityClient";
+import { motion } from "framer-motion";
+import {
+  scrollProps,
+  fadeIn,
+  fadeRight,
+  fadeLeft,
+  zoomIn,
+} from "../../animations/scrollAnimations";
+import { useAnimationMobile } from "../../hooks/useAnimationMobile";
 
 const dummySlides = [
   {
@@ -30,6 +39,8 @@ const dummySlides = [
 const USE_CMS = true; // ganti false kalau mau balik ke dummy
 
 export const Area5 = () => {
+  const isMobile = useAnimationMobile(768);
+  const MotionLink = motion(Link);
   const [slides, setSlides] = useState(USE_CMS ? [] : dummySlides);
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(null); // state buat arah animasi slide (sliding efek)
@@ -92,7 +103,11 @@ export const Area5 = () => {
       /> */}
 
       {/* banner dengan sliding efek */}
-      <div className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[768px]:h-[240px] overflow-hidden relative">
+      <motion.div
+        {...scrollProps}
+        variants={zoomIn}
+        className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[768px]:h-[240px] overflow-hidden relative"
+      >
         {prevImage && (
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -104,10 +119,14 @@ export const Area5 = () => {
           className={`absolute inset-0 bg-cover bg-center ${direction === "right" ? "slide-in-right" : direction === "left" ? "slide-in-left" : ""}`}
           style={{ backgroundImage: bgImage ? `url('${bgImage}')` : "none" }}
         />
-      </div>
+      </motion.div>
 
       <div className="flex px-20 max-[768px]:px-14 max-[480px]:px-8 pt-15 max-[768px]:justify-between max-[768px]:flex-col">
-        <div className="flex gap-16 order-1 max-[768px]:order-1 max-[768px]:pb-10 items-start">
+        <motion.div
+          {...scrollProps}
+          variants={fadeLeft}
+          className="flex gap-16 order-1 max-[768px]:order-1 max-[768px]:pb-10 items-start"
+        >
           <button className="w-16 group" onClick={prev}>
             <img
               src="/previous.png"
@@ -132,17 +151,23 @@ export const Area5 = () => {
               alt="next"
             />
           </button>
-        </div>
+        </motion.div>
         <div className="order-2 max-[768px]:order-2 ml-80 max-[1720px]:ml-74 max-[1480px]:ml-60 max-[1280px]:ml-50 max-[1030px]:ml-40 max-[768px]:ml-0">
-          <p className="pb-30">
-            {currentSlide ? currentSlide.caption : "Loading..."}
-          </p>
-          <Link
-            className="bg-black h-10 flex w-[222px] hover:bg-black/50 max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full justify-center"
-            to="about"
+          <motion.p
+            {...scrollProps}
+            variants={isMobile ? fadeLeft : fadeRight}
+            className="pb-30"
           >
-            <p className={buttonp}>Learn More</p>
-          </Link>
+            {currentSlide ? currentSlide.caption : "Loading..."}
+          </motion.p>
+          <motion.div {...scrollProps} variants={fadeRight}>
+            <Link
+              className="bg-black h-10 flex w-[222px] hover:bg-black/50 max-[768px]:w-[180px] max-[640px]:w-[160px] max-[480px]:w-full justify-center"
+              to="about"
+            >
+              <p className={buttonp}>Learn More</p>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </div>
