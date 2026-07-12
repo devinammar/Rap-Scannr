@@ -290,6 +290,8 @@ Rap-Scannr
 - Deezer API
 - soundcloud-scraper ([NPM](https://www.npmjs.com/))
 - ffmpeg (Audio Processing)
+- cmu-pronouncing-dictionary-cjs ([NPM](https://www.npmjs.com/))
+- syllable ([NPM](https://www.npmjs.com/))
 - Recharts (Data Visualization)
 
 ### Deployment
