@@ -223,9 +223,13 @@ Rap-Scannr
 │   │   └── api.js
 │   │
 │   ├── hooks
+│   │   ├── useAnimationMobile.js
 │   │   ├── useHideOnScroll.js
 │   │   ├── useRapBattle.js
 │   │   └── useTrackAnalysis.js
+│   │
+│   ├── animations
+│   │   └── scrollAnimations.js
 │   │
 │   ├── pages
 │   │   ├── about.jsx
