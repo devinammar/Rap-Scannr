@@ -25,13 +25,13 @@ export const Area6 = () => {
         {...scrollProps}
         variants={zoomIn}
         id="imageleft"
-        className="bg-cover bg-center h-full w-[480px] shrink-0 max-[1440px]:w-[440px] max-[1400px]:w-[400px] max-[1360px]:w-[380px] max-[1340px]:w-[340px] max-[1300px]:w-[300px] max-[1280px]:w-full max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[768px]:h-[240px]"
+        className="bg-cover flex justify-end bg-center h-full w-[480px] shrink-0 max-[1440px]:w-[440px] max-[1400px]:w-[400px] max-[1360px]:w-[380px] max-[1340px]:w-[340px] max-[1300px]:w-[300px] max-[1280px]:w-full max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[768px]:h-[240px]"
         style={{
           backgroundImage: "url('/pexels-introspectivedsgn-7464823.jpg')",
         }}
       >
         <Link to="/">
-          <img src="/nama-logo.png" alt="logo" />
+          <img src="/LogoRapScannr.jpg" alt="logo" className="w-20 max-[1280px]:w-16 max-[800px]:w-14 max-[768px]:w-13 max-[520px]:w-12 mt-12 mr-12 max-[1280px]:mt-10 max-[1280px]:mr-10 max-[560px]:mt-8 max-[560px]:mr-8 max-[310px]:mt-7 max-[310px]:mr-7" />
         </Link>
       </motion.div>
       <motion.div {...scrollProps}
