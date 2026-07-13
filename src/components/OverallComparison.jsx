@@ -1,3 +1,11 @@
+import { motion } from "framer-motion";
+import {
+  scrollProps,
+  fadeIn,
+  fadeRight,
+  fadeLeft,
+  zoomIn,
+} from "../animations/scrollAnimations";
 import {
   BarChart,
   Bar,
@@ -29,7 +37,7 @@ export const OverallComparison = ({ song1, song2 }) => {
   const title2 = song2.meta.title || "Song 2";
 
   return (
-    <div className="w-full bg-grey/10 px-10 py-7 max-[560px]:px-8 max-[560px]:py-6 shadow-[inset_0_0_0_4px_var(--color-black)]">
+    <motion.div {...scrollProps} variants={zoomIn} className="w-full bg-grey/10 px-10 py-7 max-[560px]:px-8 max-[560px]:py-6 shadow-[inset_0_0_0_4px_var(--color-black)]">
       <p className="text-h3 font-medium text-black text-center mb-6">
         Overall Comparison
       </p>
@@ -72,6 +80,6 @@ export const OverallComparison = ({ song1, song2 }) => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-    </div>
+    </motion.div>
   );
 };

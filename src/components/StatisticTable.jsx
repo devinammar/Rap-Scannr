@@ -1,3 +1,12 @@
+import { motion } from "framer-motion";
+import {
+  scrollProps,
+  fadeIn,
+  fadeRight,
+  fadeLeft,
+  zoomIn,
+} from "../animations/scrollAnimations";
+
 export const StatisticTable = ({ stats }) => {
   if (!stats) return null;
 
@@ -9,7 +18,7 @@ export const StatisticTable = ({ stats }) => {
   ];
 
   return (
-    <div className="w-full bg-grey/10 px-10 py-7 max-[560px]:px-8 max-[560px]:py-6 shadow-[inset_0_0_0_4px_var(--color-black)]">
+    <motion.div {...scrollProps} variants={zoomIn} className="w-full bg-grey/10 px-10 py-7 max-[560px]:px-8 max-[560px]:py-6 shadow-[inset_0_0_0_4px_var(--color-black)]">
       <p className="text-h3 font-medium text-black text-center mb-5">Statistic</p>
       <table className="w-full">
         <thead>
@@ -27,6 +36,6 @@ export const StatisticTable = ({ stats }) => {
           ))}
         </tbody>
       </table>
-    </div>
+    </motion.div>
   );
 };

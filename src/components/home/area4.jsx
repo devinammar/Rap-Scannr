@@ -17,7 +17,6 @@ export const Area4 = () => {
     "absolute inset-0 bg-black -translate-y-full group-hover:translate-y-0 transition-transform duration-300";
   const cardhovertext =
     "absolute inset-0 flex px-8 pt-20 max-[816px]:pt-14 opacity-0 group-hover:opacity-100 transition-opacity duration-300";
-  const MotionLink = motion(Link);
 
   return (
     <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center grid justify-items-end mt-62 max-[1024px]:mt-52 max-[768px]:mt-46 px-20 max-[768px]:px-14 max-[480px]:px-8 max-[1192px]:w-fit max-[1192px]:justify-self-end max-[940px]:w-full max-[940px]:justify-self-stretch">

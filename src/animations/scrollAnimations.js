@@ -8,7 +8,7 @@ export const scrollProps = {
     whileInView: "visible",
     viewport: {
         once: false,
-        amount: 0.3,
+        amount: 0.1,
     },
 };
 
