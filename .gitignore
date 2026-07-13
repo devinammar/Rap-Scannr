@@ -25,4 +25,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-backend/services/sps-service/temp/
+backend/services/sps-service/temp/*
+!backend/services/sps-service/temp/.gitkeep
