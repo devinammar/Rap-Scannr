@@ -1,4 +1,4 @@
-Note: just needs to be deployed
+Note: Just needs to be deployed
 
 # Rap Scannr
 
