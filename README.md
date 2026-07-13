@@ -1,4 +1,4 @@
-on progress
+on progress - just needs to be deployed
 
 # Rap Scannr
 
@@ -11,7 +11,7 @@ Click this to open the website :
 Or you can copy this link and paste it into your browser:
 
 ```
-https:/
+https:/Not deployed yet
 ```
 
 ## ✨ Features
@@ -79,6 +79,7 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
 
 8. **Deployment**
 
+   Not deployed yet
 
 ## 🏗️ System Architecture
 ![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/921f35a1f600a8f9bd662230e881487eb43cb17e/Software%20Architecture.jpg)
@@ -167,22 +168,19 @@ Rap-Scannr
 │           │       ├── timestamp.controller.js
 │           │       └── timestamp.service.js
 │           │
-│           ├── utils
-│           │   ├── appleMusicMetadata.js
-│           │   ├── deezerMetadata.js
-│           │   ├── soundcloudMetadata.js
-│           │   ├── spotifyMetadata.js
-│           │   ├── spsCalculator.js
-│           │   ├── syllableCounter.js
-│           │   ├── whisperJsonParser.js
-│           │   ├── whisperParser.js
-│           │   ├── whisperRunner.js
-│           │   ├── youtubeDownloader.js
-│           │   └── youtubeSearch.js
-│           │
-│           └── whisper.cpp
-│               └── (external Whisper.cpp source code)
-│
+│           └── utils
+│               ├── appleMusicMetadata.js
+│               ├── deezerMetadata.js
+│               ├── soundcloudMetadata.js
+│               ├── spotifyMetadata.js
+│               ├── spsCalculator.js
+│               ├── syllableCounter.js
+│               ├── whisperJsonParser.js
+│               ├── whisperParser.js
+│               ├── whisperRunner.js
+│               ├── youtubeDownloader.js
+│               └── youtubeSearch.js
+│           
 │
 ├── public ── (media assets)
 │   │
