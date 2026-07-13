@@ -1,4 +1,4 @@
-on progress - just needs to be deployed
+Note: just needs to be deployed
 
 # Rap Scannr
 
