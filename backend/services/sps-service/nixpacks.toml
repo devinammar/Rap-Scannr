@@ -1,4 +1,4 @@
 # ini penambahan sebelum deploy
 
-[phases.setup]
-nixPkgs = ["ffmpeg"]
+[build]
+nixpacksConfigPath = "nixpacks.toml"
