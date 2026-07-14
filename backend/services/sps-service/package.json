@@ -25,6 +25,7 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "node-fetch": "^2.7.0",
+    "soundcloud-scraper": "^5.0.3",
     "spotify-url-info": "^3.3.1",
     "syllable": "^5.0.1",
     "uuid": "^14.0.1",
