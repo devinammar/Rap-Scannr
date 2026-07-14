@@ -1,12 +1,10 @@
-Note: Just needs to be deployed
-
 # Rap Scannr
 
 Rap Scannr is an AI-powered web platform designed to analyze rap speed, allowing anyone to analyze and compare rap songs using music links from various streaming platforms. Users can explore detailed information about each track, including rap speed statistics, flow visualization, and performance comparisons through an intuitive and user-friendly interface. By combining artificial intelligence (AI) with interactive data visualization, Rap Scannr provides a modern and accessible way to explore rap music from a more objective and analytical perspective.
 
 Click this to open the website :
 
-[![RapScannr](https://img.shields.io/badge/Rap%20Scannr%20-Visit-white)](https:)
+[![RapScannr](https://img.shields.io/badge/Rap%20Scannr%20-Visit-white)](https://rapscannr.vercel.app/)
 
 Or you can copy this link and paste it into your browser:
 
@@ -78,8 +76,6 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
    Comprehensive testing was conducted on all implemented features to ensure the application functioned as expected under different scenarios. Both the Track Analysis and Rap Battle features were tested using music links from YouTube, Spotify, SoundCloud, Apple Music, and Deezer. Testing covered API communication, analysis accuracy, UI rendering, loading behavior, responsive layouts, and error handling. Any issues discovered during testing were immediately evaluated and resolved through iterative improvements before proceeding to the final deployment stage
 
 8. **Deployment**
-
-   Not deployed yet
 
 ## 🏗️ System Architecture
 ![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/921f35a1f600a8f9bd662230e881487eb43cb17e/Software%20Architecture.jpg)
