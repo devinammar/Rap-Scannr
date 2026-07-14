@@ -9,7 +9,7 @@ Click this to open the website :
 Or you can copy this link and paste it into your browser:
 
 ```
-https://Not deployed yet
+https://rapscannr.vercel.app
 ```
 
 ## ✨ Features
