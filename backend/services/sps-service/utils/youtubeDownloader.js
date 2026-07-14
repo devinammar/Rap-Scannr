@@ -33,6 +33,8 @@ module.exports = {
 
 // ________________________________________________________
 
+// ini pake youtube API dari RapidAPI
+
 // const axios = require("axios");
 // const path = require("path");
 // const fs = require("fs");
