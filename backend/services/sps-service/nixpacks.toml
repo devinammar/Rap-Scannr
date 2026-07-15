@@ -1,4 +1,0 @@
-# ini penambahan sebelum deploy
-
-[phases.setup]
-nixPkgs = ["ffmpeg"]
