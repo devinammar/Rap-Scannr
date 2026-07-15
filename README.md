@@ -276,6 +276,7 @@ Rap-Scannr
 ### Frontend
 - HTML
 - Tailwind CSS
+- JavaScript
 - ReactJS + Vite
 
 ### Backend
