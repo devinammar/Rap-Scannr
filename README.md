@@ -289,11 +289,11 @@ Rap-Scannr
 
 ### API & Library
 - Whisper Large v3 Turbo AI model from OpenAI ([Groq.com](https://groq.com/))
-- YouTube MP3 API ([RapidAPI](https://rapidapi.com/ytjar/api/YouTube%20MP3))
 - spotify-url-info ([NPM](https://www.npmjs.com/))
 - iTunes public API
 - Deezer API
 - soundcloud-scraper ([NPM](https://www.npmjs.com/))
+- yt-dlp (Audio Downloader)
 - ffmpeg (Audio Processing)
 - cmu-pronouncing-dictionary-cjs ([NPM](https://www.npmjs.com/))
 - syllable ([NPM](https://www.npmjs.com/))
