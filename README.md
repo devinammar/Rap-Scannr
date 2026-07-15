@@ -4,7 +4,7 @@ Rap Scannr is an AI-powered web platform designed to analyze rap speed, allowing
 
 Click this to open the website :
 
-[![RapScannr](https://img.shields.io/badge/Rap%20Scannr%20-Visit-white)](https://rapscannr.vercel.app/)
+[![RapScannr](https://img.shields.io/badge/Rap%20Scannr%20-Visit-white)](https://rapscannr.vercel.app)
 
 Or you can copy this link and paste it into your browser:
 
@@ -77,6 +77,8 @@ Rap Scannr was developed using an iterative Agile approach. Each stage involves 
 
 8. **Deployment**
 
+   For deployment, the backend consists of two services, API Gateway and SPS Service, each deployed separately using Railway, while the frontend is deployed using Vercel. Following deployment, the application underwent thorough testing covering core feature functionality, cross-platform compatibility, and overall responsiveness to ensure the system performed reliably in the production environment
+
 ## 🏗️ System Architecture
 ![Software Architecture](https://github.com/devinammar/Rap-Scannr/blob/921f35a1f600a8f9bd662230e881487eb43cb17e/Software%20Architecture.jpg)
 
@@ -110,6 +112,7 @@ Rap-Scannr
 │           ├── server.js
 │           ├── app.js
 │           ├── result.json
+│           ├── Dockerfile
 │           │
 │           ├── test-audio.js
 │           ├── test-download.js
@@ -284,17 +287,19 @@ Rap-Scannr
 
 ### API & Library
 - Whisper Large v3 Turbo AI model from OpenAI ([Groq.com](https://groq.com/))
-- YouTube MP3 API ([RapidAPI](https://rapidapi.com/ytjar/api/YouTube%20MP3))
 - spotify-url-info ([NPM](https://www.npmjs.com/))
 - iTunes public API
 - Deezer API
 - soundcloud-scraper ([NPM](https://www.npmjs.com/))
+- yt-dlp (Audio Downloader)
 - ffmpeg (Audio Processing)
 - cmu-pronouncing-dictionary-cjs ([NPM](https://www.npmjs.com/))
 - syllable ([NPM](https://www.npmjs.com/))
 - Recharts (Data Visualization)
 
 ### Deployment
+- Vercel (For Frontend)
+- Railway (For Backend)
 
 ### Design
 - Figma (UI/UX) ([Wireframe](https://www.figma.com/design/ECInGwBuF689zUZwcwnTu5/Rap-Scannr?m=auto&t=lCAtNV5CoYEmhxdH-1))
