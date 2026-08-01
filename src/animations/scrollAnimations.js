@@ -69,6 +69,19 @@ export const zoomIn = {
     },
 };
 
+export const fadeOnly = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 1.5,
+            ease: "easeOut",
+        },
+    },
+};
+
 export const container = {
     hidden: {},
     visible: {

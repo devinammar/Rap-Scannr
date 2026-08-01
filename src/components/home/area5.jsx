@@ -10,6 +10,7 @@ import {
   fadeRight,
   fadeLeft,
   zoomIn,
+  fadeOnly,
 } from "../../animations/scrollAnimations";
 import { useAnimationMobile } from "../../hooks/useAnimationMobile";
 
@@ -105,7 +106,7 @@ export const Area5 = () => {
       {/* banner dengan sliding efek */}
       <motion.div
         {...scrollProps}
-        variants={zoomIn}
+        variants={fadeOnly}
         className="w-full h-[372px] max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[768px]:h-[240px] overflow-hidden relative"
       >
         {prevImage && (

@@ -8,6 +8,7 @@ import {
   fadeRight,
   fadeLeft,
   zoomIn,
+  fadeOnly,
 } from "../../animations/scrollAnimations";
 import { useAnimationMobile } from "../../hooks/useAnimationMobile";
 
@@ -23,7 +24,7 @@ export const Area6 = () => {
     <div className="min-[1920px]:w-[1920px] min-[1920px]:justify-self-center mt-62 max-[1024px]:mt-52 max-[768px]:mt-46 h-140 flex gap-15 max-[1280px]:flex-col">
       <motion.div
         {...scrollProps}
-        variants={zoomIn}
+        variants={fadeOnly}
         id="imageleft"
         className="bg-cover flex justify-end bg-center h-full w-[480px] shrink-0 max-[1440px]:w-[440px] max-[1400px]:w-[400px] max-[1360px]:w-[380px] max-[1340px]:w-[340px] max-[1300px]:w-[300px] max-[1280px]:w-full max-[1280px]:h-[320px] max-[1024px]:h-[290px] max-[768px]:h-[240px]"
         style={{
@@ -35,7 +36,7 @@ export const Area6 = () => {
         </Link>
       </motion.div>
       <motion.div {...scrollProps}
-        variants={isMobile ? undefined : zoomIn} id="footer" className="bg-grey w-full flex flex-col">
+        variants={isMobile ? undefined : fadeOnly} id="footer" className="bg-grey w-full flex flex-col">
         <div className="mx-auto px-20 max-[1044px]:mx-0 max-[1044px]:pr-0 max-[1044px]:pl-20 max-[768px]:pl-14 max-[480px]:pl-8 py-18 flex flex-col justify-between h-full max-[1280px]:h-140 max-[1044px]:h-auto">
           <div
             id="list"
