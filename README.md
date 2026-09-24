@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/devinammar/Rap-Scannr/blob/94da9df123f66b5f83935da4ca7bc99d39cbf0b7/Banner.jpg" alt="Problems" width="800">
+  <img src="https://github.com/devinammar/Rap-Scannr/blob/94da9df123f66b5f83935da4ca7bc99d39cbf0b7/Banner.jpg" alt="Problems" width="900">
 </p>
 
 Rap Scannr is an AI-powered web platform designed to analyze rap speed, allowing anyone to analyze and compare rap songs using music links from various streaming platforms. Users can explore detailed information about each track, including rap speed statistics, flow visualization, and performance comparisons through an intuitive and user-friendly interface. By combining artificial intelligence (AI) with interactive data visualization, Rap Scannr provides a modern and accessible way to explore rap music from a more objective and analytical perspective.
